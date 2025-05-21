@@ -3,7 +3,7 @@ import "../styles/homepageContent.css";
 import KavaknPartnerPic from "../assets/websitessc/KavaknPartner.png"
 import Typo3Pic from "../assets/websitessc/Typo3-Medieninformatik.png"
 import FlexboxDefensePic from "../assets/websitessc/Flexbox-Defense.png"
-import KfzgutachterPic from "../assets/websitessc/KfzGutachter.png"
+import KfzgutachterPic from "../assets/websitessc/kfzgutachter.png"
 import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.png"
 import MedimobilPic from "../assets/websitessc/medimobil.png"
 

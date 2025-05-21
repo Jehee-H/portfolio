@@ -1,5 +1,11 @@
 
 import "../styles/homepageContent.css";
+import KavaknPartnerPic from "../assets/websitessc/KavaknPartner.png"
+import Typo3Pic from "../assets/websitessc/Typo3-Medieninformatik.png"
+import FlexboxDefensePic from "../assets/websitessc/Flexbox-Defense.png"
+import KfzgutachterPic from "../assets/websitessc/KfzGutachter.png"
+import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.png"
+import MedimobilPic from "../assets/websitessc/medimobil.png"
 
 type webList = {
   title: string;
@@ -16,42 +22,42 @@ const data: webList[] = [
     url: 'https://Medimobil-Giessen.de',
     program: 'Vue, TypeScript | Mobile First Design',
     desc: 'Eine Webseite für ein lokales Unternehmen.',
-    preview: 'https://placehold.co/1200x200',
+    preview: MedimobilPic,
   },
   {
     title: 'Hirameki Insight',
     url: 'https://www.hiramekiinsight.com/',
     program: 'Shopify, HTML, CSS, JavaScript',
     desc: "Hirameki Insight ist eine englischsprachige Plattform...",
-    preview: 'https://placehold.co/1200x200',
+    preview: HiramekiinsightPic,
   },
   {
     title: 'Kavak & Partner',
     url: 'https://kavak-partner.netlify.app/',
     program: 'SvelteKit, HTML, CSS',
     desc: "",
-    preview: 'https://placehold.co/1200x200',
+    preview: KavaknPartnerPic,
   },
   {
     title: 'Kfz Gutachtersozietät - Kavak',
     url: 'https://kfzgutachtersozietaet.de/',
     program: 'SvelteKit, HTML, CSS, Supabase',
     desc: "",
-    preview: 'https://placehold.co/1200x200',
+    preview: KfzgutachterPic,
   },
   {
     title: 'Flexbox Defense',
     url: 'https://d4ni3l2402.github.io/FlexboxDefense/index.html',
     program: 'HTML, CSS, JavaScript, GSAP',
     desc: 'Ein Spiel, um Flexbox zu lernen.',
-    preview: 'https://placehold.co/1200x200',
+    preview: FlexboxDefensePic,
   },
   {
     title: 'THM Typo3 Projekt',
     url: 'https://team-f.abija.de/',
     program: 'Typo3',
     desc: 'Mein Portfolio.',
-    preview: 'https://placehold.co/1200x200',
+    preview: Typo3Pic,
   },
 ];
 
@@ -61,7 +67,7 @@ const HomepageContent = () => {
       <div className="projects">
         <div className="projects-text">
           <h2 className="projects-title">Projekte Showcase</h2>
-          <a href="" className="see-more-button" >Alle Projekte</a>
+          <a href="" className="btn" >Alle Projekte</a>
         </div>
 
         <div className="projects-container">

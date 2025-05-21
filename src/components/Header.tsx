@@ -6,7 +6,13 @@ const Header = () => {
     return (
         <header>
             <nav>
-                <div className='logo'>Jehee</div>
+                <div className='logo'>
+                    <div>J</div>
+                    <div>e</div>
+                    <div>h</div>
+                    <div>e</div>
+                    <div>e</div>
+                </div>
                 <div className='headerMenu'>
 
                     <div className='menuItem'>HOME</div>
@@ -16,7 +22,7 @@ const Header = () => {
 
                 </div>
                 <div className='extraMenu'>
-                    <div className='talk'>Let's Talk</div>
+                    <div className='talk btn'>Let's Talk</div>
                     <div className='mode'>d</div>
                     <div className="languageBlock">
                         <div className='langContainer' >
@@ -40,7 +46,7 @@ const Header = () => {
                             </svg>
                         </div>
                     </div>
-                </div>            
+                </div>
             </nav>
         </header>
     );

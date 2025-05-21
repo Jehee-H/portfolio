@@ -30,7 +30,7 @@ const Home = () => {
           >
             <h1 className="title">Willkommen zu meinem Portfolio!</h1>
             <p className="description">
-              Hi, ich bin Jehee und bin ein Webdeveloper mit einer Leidenschaft für kreative Lösungen.
+              Hallo, ich bin Jehee – Webentwickler mit einer Leidenschaft für innovative, nutzerzentrierte Lösungen. 
             </p>
           </motion.div>
 

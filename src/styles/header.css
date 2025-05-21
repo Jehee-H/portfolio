@@ -1,10 +1,10 @@
-header{
+header {
     z-index: 999;
     position: fixed;
     width: 100%;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -17,25 +17,107 @@ nav{
     border-radius: 15px;
 }
 
-.logo{
+.logo {
     font-family: Sora;
     font-size: 2em;
     font-weight: 800;
     margin-left: 1.5em;
+    display: flex;
+    align-items: center;
+    cursor: default;
 }
 
-.headerMenu{
+.logo div {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+/* Keyframes: einfache Aufwärtsbewegung */
+@keyframes bounceUpWithPause {
+    0% {
+        transform: translateY(0);
+    }
+
+    15% {
+        transform: translateY(-8px);
+    }
+
+    30% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Hover auf gesamtes Logo triggert alle Buchstaben */
+.logo:hover div {
+    animation: bounceUpWithPause 1.3s ease-in-out infinite;
+}
+
+/* Verzögere jeden Buchstaben ein bisschen */
+.logo:hover div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.logo:hover div:nth-child(2) {
+    animation-delay: 0.05s;
+}
+
+.logo:hover div:nth-child(3) {
+    animation-delay: 0.1s;
+}
+
+.logo:hover div:nth-child(4) {
+    animation-delay: 0.15s;
+}
+
+.logo:hover div:nth-child(5) {
+    animation-delay: 0.2s;
+}
+
+.headerMenu {
     display: flex;
     gap: 2em;
 }
 
-.menuItem{
+.menuItem {
+    position: relative;
     font-family: Sora;
     font-weight: 600;
     cursor: pointer;
+    padding: 0.5em 0;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.extraMenu{
+.menuItem::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: black;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+    border-radius: 2px;
+}
+
+.menuItem:hover {
+    color: #1e1e1e;
+    transform: translateY(-2px);
+}
+
+.menuItem:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+.extraMenu {
     margin-right: 1.5em;
     display: flex;
     align-items: center;
@@ -44,16 +126,7 @@ nav{
     /* background-color: royalblue; */
 }
 
-.talk{
-    font-family: Sora;
-    padding: 14px 28px;
-    border-radius: 10px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
-}
-
-.mode{
+.mode {
     width: 50px;
     height: 50px;
     border: solid black 2px;
@@ -61,7 +134,7 @@ nav{
     cursor: pointer;
 }
 
-.languageBlock{
+.languageBlock {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,31 +162,30 @@ nav{
     opacity: 0;
     /* transform: scale(0.8); */
     transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-  
-  /* Sichtbarkeit erhöhen, wenn hovered oder aktiv */
-  .langContainer:hover svg,
-  .langContainer svg.visible {
+}
+
+/* Sichtbarkeit erhöhen, wenn hovered oder aktiv */
+.langContainer:hover svg,
+.langContainer svg.visible {
     opacity: 1;
     transform: scale(1);
-  }
-  
-  /* Unsichtbar machen, wenn nicht aktiv oder gehovt */
-  .langContainer svg.hidden {
+}
+
+/* Unsichtbar machen, wenn nicht aktiv oder gehovt */
+.langContainer svg.hidden {
     opacity: 0;
     transform: scale(0.8);
     display: none;
-  }
-  
-  /* Zusätzlicher Stil für die SVGs */
-  .langContainer svg {
+}
+
+/* Zusätzlicher Stil für die SVGs */
+.langContainer svg {
     cursor: pointer;
     margin: 0 5px;
-  }
-  
-  .langContainer {
+}
+
+.langContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
+}

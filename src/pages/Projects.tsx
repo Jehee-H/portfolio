@@ -7,7 +7,7 @@ import "../styles/projects.css";
 const Projects = () => {
     const [categoryFilter, setCategoryFilter] = useState("Alle");
 
-    const categories = ["Alle", "Auftrag", "Uni-Projekt", "Eigene Projekt"];
+    const categories = ["Alle", "Auftrag", "Uni-Projekte", "Eigene Projekt"];
 
     const filteredProjects =
         categoryFilter === "Alle"

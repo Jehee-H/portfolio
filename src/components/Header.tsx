@@ -15,10 +15,10 @@ const Header = () => {
                 </div>
                 <div className='headerMenu'>
 
-                    <div className='menuItem'>HOME</div>
-                    <div className='menuItem'>ABOUT ME</div>
-                    <div className='menuItem'>PROJECTS</div>
-                    <div className='menuItem'>LINKS</div>
+                    <a href='/' className='menuItem'>HOME</a>
+                    <a href='/projects' className='menuItem'>PROJECTS</a>
+                    <a href='/' className='menuItem'>ABOUT ME</a>
+                    <a className='menuItem'>LINKS</a>
 
                 </div>
                 <div className='extraMenu'>

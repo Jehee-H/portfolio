@@ -89,6 +89,7 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
     color: #fff;
     box-sizing: border-box;
+
 }
 
 .project-title {
@@ -97,6 +98,7 @@
     font-weight: 600;
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.8);
     background-color: #222222;
+    width: fit-content;
 }
 
 /* === Info Panel === */

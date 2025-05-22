@@ -31,26 +31,19 @@ const data: webList[] = [
     desc: "Hirameki Insight ist eine englischsprachige Plattform...",
     preview: HiramekiinsightPic,
   },
-  {
-    title: 'Kavak & Partner',
-    url: 'https://kavak-partner.netlify.app/',
-    program: 'SvelteKit, HTML, CSS',
-    desc: "",
-    preview: KavaknPartnerPic,
-  },
+  // {
+  //   title: 'Kavak & Partner',
+  //   url: 'https://kavak-partner.netlify.app/',
+  //   program: 'SvelteKit, HTML, CSS',
+  //   desc: "",
+  //   preview: KavaknPartnerPic,
+  // },
   {
     title: 'Kfz Gutachtersozietät - Kavak',
     url: 'https://kfzgutachtersozietaet.de/',
     program: 'SvelteKit, HTML, CSS, Supabase',
     desc: "",
     preview: KfzgutachterPic,
-  },
-  {
-    title: 'Flexbox Defense',
-    url: 'https://d4ni3l2402.github.io/FlexboxDefense/index.html',
-    program: 'HTML, CSS, JavaScript, GSAP',
-    desc: 'Ein Spiel, um Flexbox zu lernen.',
-    preview: FlexboxDefensePic,
   },
   {
     title: 'THM Typo3 Projekt',
@@ -67,7 +60,7 @@ const HomepageContent = () => {
       <div className="projects">
         <div className="projects-text">
           <h2 className="projects-title">Projekte Showcase</h2>
-          <a href="" className="btn" >Alle Projekte</a>
+          <a href="/projects" className="btn" >Alle Projekte</a>
         </div>
 
         <div className="projects-container">

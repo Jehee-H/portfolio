@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import pbImg from "../assets/me.png";
 import "../styles/home.css";
 import HomepageContent from "../components/HomepageContent.tsx";
+import background from "../assets/background.mp4";
 
 
 
@@ -12,6 +13,14 @@ const Home = () => {
       <div className="wrapper">
         {/* Bild als normales <img> */}
         {/* <img src={bgImg} className="bgImg" alt="Hintergrund" /> */}
+        <video
+          className="bgImg video-container"
+          src={background}
+          autoPlay
+          loop
+          muted
+          playsInline
+        ></video>
         {/* <div className="bgImg"></div> */}
 
         {/* Motion-Div *über* dem Bild */}

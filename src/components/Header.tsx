@@ -23,7 +23,7 @@ const Header = () => {
                 </div>
                 <div className='extraMenu'>
                     <div className='talk btn'>Let's Talk</div>
-                    <div className='mode'>d</div>
+                    {/* <div className='mode'>d</div> */}
                     <div className="languageBlock">
                         <div className='langContainer' >
                             <svg className="flag"

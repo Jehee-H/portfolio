@@ -12,7 +12,7 @@ const Header = () => {
     >
       <div className="footer-text">
         <p>&copy; 2025 Jehee Han</p>
-        <p>Contact: jehee.han1701@gmail.com</p>
+        <p>Contact: jeheehan.contact@gmail.com</p>
         <div className="logos">
           <a href="https://www.linkedin.com/in/jehee-han-673a382b8/" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="#ffffff">

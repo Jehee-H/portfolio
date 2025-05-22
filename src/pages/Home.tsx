@@ -30,7 +30,10 @@ const Home = () => {
           >
             <h1 className="title">Willkommen zu meinem Portfolio!</h1>
             <p className="description">
-              Hallo, ich bin Jehee – Webentwickler mit einer Leidenschaft für innovative, nutzerzentrierte Lösungen. 
+              Hallo, ich bin Jehee – Webentwickler mit einer Leidenschaft für innovative, nutzerzentrierte Lösungen.
+            </p>
+            <p className="email">
+              jeheehan.contact@gmail.com
             </p>
           </motion.div>
 
@@ -55,6 +58,7 @@ const Home = () => {
             <img src={pbImg} alt="Profilbild" className="profile-image" />
           </motion.div>
         </motion.div>
+
 
       </div>
       <HomepageContent />

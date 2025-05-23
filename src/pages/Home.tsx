@@ -11,8 +11,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="wrapper">
-        {/* Bild als normales <img> */}
-        {/* <img src={bgImg} className="bgImg" alt="Hintergrund" /> */}
+        
         <video
           className="bgImg video-container"
           src={background}

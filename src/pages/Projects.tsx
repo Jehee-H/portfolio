@@ -1,13 +1,22 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projectData";
-import { AnimatePresence, motion } from "framer-motion";
+// import { AnimatePresence, motion } from "framer-motion";
 import "../styles/projects.css";
 
-const Projects = () => {
-    const [categoryFilter, setCategoryFilter] = useState("Alle");
+type CategoryKey = "Alle" | "Auftrag" | "Uni-Projekt" | "Eigene Projekt";
 
-    const categories = ["Alle", "Auftrag", "Uni-Projekte", "Eigene Projekt"];
+const Projects = () => {
+    const [categoryFilter, setCategoryFilter] = useState<CategoryKey>("Alle");
+
+    const categoryLabels: Record<CategoryKey, string> = {
+        "Alle": " Alle",
+        "Auftrag": " Auftrag",
+        "Uni-Projekt": "Uni-Projekte",
+        "Eigene Projekt": "Eigene Projekt",
+    };
+
+    const categories: CategoryKey[] = ["Alle", "Auftrag", "Uni-Projekt", "Eigene Projekt"];
 
     const filteredProjects =
         categoryFilter === "Alle"
@@ -25,21 +34,22 @@ const Projects = () => {
                             className={`filter-btn ${categoryFilter === category ? "active" : ""}`}
                             onClick={() => setCategoryFilter(category)}
                         >
-                            {category}
+                            {categoryLabels[category]}
                         </button>
                     ))}
+
                 </div>
             </div>
 
             <div className="projectsPage-container">
-                <AnimatePresence mode="popLayout">
+                <div className="projectsPage-card-container">
+
+
                     {filteredProjects.map((project) => (
                         <motion.div
-                            layout
                             key={project.id}
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.95 }}
                             transition={{ duration: 0.3 }}
                             className="projectsPage-card"
                         >
@@ -65,7 +75,7 @@ const Projects = () => {
                             </Link>
                         </motion.div>
                     ))}
-                </AnimatePresence>
+                </div>
             </div>
         </div>
     );

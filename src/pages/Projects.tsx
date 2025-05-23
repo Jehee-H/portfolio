@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projectData";
-// import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import "../styles/projects.css";
 
 type CategoryKey = "Alle" | "Auftrag" | "Uni-Projekt" | "Eigene Projekt";

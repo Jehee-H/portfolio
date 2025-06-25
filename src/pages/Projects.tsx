@@ -53,7 +53,6 @@ const Projects = () => {
                             transition={{ duration: 0.3 }}
                             className="projectsPage-card"
                         >
-
                             <Link to={`/projects/${project.id}`}>
                                 <div className="projectsPage-img-wrapper">
                                     <img

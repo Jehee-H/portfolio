@@ -49,7 +49,7 @@ const data: webList[] = [
     title: 'THM Typo3 Projekt',
     url: 'https://team-f.abija.de/',
     program: 'Typo3',
-    desc: 'Mein Portfolio.',
+    desc: 'THM-Projekt – Einführung in TYPO3 zur praxisnahen CMS-Entwicklung und modernem Webdesign.',
     preview: Typo3Pic,
   },
 ];
@@ -57,43 +57,8 @@ const data: webList[] = [
 const HomepageContent = () => {
   return (
     <div className="homepageContent">
-      <div className="projects">
-        <div className="projects-text">
-          <h2 className="projects-title">Projekte Showcase</h2>
-          <a href="/projects" className="btn" >Alle Projekte</a>
-        </div>
 
-        <div className="projects-container">
-          {data.map((project, index) => (
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-card-horizontal"
-              key={index}
-            >
-              <div className="project-img-wrapper">
-                <img
-                  src={project.preview}
-                  alt={`Preview von ${project.title}`}
-                  className="project-img"
-                />
-                <div className="project-title-overlay">
-                  <h3 className="project-title">{project.title}</h3>
-                </div>
-
-                {/* Neue Infobox */}
-                <div className="project-info">
-                  <p className="project-desc">{project.desc || 'Keine Beschreibung vorhanden.'}</p>
-                  <p className="project-program">{project.program}</p>
-                </div>
-              </div>
-            </a>
-
-          ))}
-        </div>
-      </div>
-      <div className="aboutMe content">
+      <div className="aboutMe content" id="about">
         <div className="aboutMe-image">
           <img src="https://placehold.co/350x420" alt="Mein Bild" className="aboutMe-img" />
         </div>
@@ -110,6 +75,7 @@ const HomepageContent = () => {
           </div>
         </div>
       </div>
+
       <div className="experience">
         <h2 className="experience-title">Erfahrung</h2>
         <div className="experience-container">
@@ -121,6 +87,46 @@ const HomepageContent = () => {
           </p>
         </div>
       </div>
+
+      <div className="projects">
+        <div className="projects-text">
+          <h2 className="projects-title">Projekte Showcase</h2>
+          <a href="/projects" className="btn" >Alle Projekte</a>
+        </div>
+
+        <div className="projects-container">
+          {data.map((project, index) => (
+            <h3 className="">{project.title}
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-card-horizontal"
+                key={index}
+              >
+                <div className="project-img-wrapper">
+                  <img
+                    src={project.preview}
+                    alt={`Preview von ${project.title}`}
+                    className="project-img"
+                  />
+                  <div className="project-title-overlay">
+                    {/* <h3 className="project-title">{project.title}</h3> */}
+                  </div>
+
+                  {/* Neue Infobox */}
+                  <div className="project-info">
+                    <h3>{project.title}</h3>
+                    <p className="project-desc">{project.desc || 'Keine Beschreibung vorhanden.'}</p>
+                    <p className="project-program">{project.program}</p>
+                  </div>
+                </div>
+              </a>
+            </h3>
+          ))}
+        </div>
+      </div>
+
     </div >
   );
 };

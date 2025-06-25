@@ -23,7 +23,7 @@ nav {
     font-family: Sora;
     font-size: 2em;
     font-weight: 800;
-    margin-left: 1.5em;
+
     display: flex;
     align-items: center;
     cursor: default;
@@ -80,9 +80,27 @@ nav {
     animation-delay: 0.2s;
 }
 
+.logo:hover div:nth-child(6) {
+    animation-delay: 0.25s;
+}
+
+.logo:hover div:nth-child(7) {
+    animation-delay: 0.3s;
+}
+
+.logo:hover div:nth-child(8) {
+    animation-delay: 0.35s;
+}
+
+.logo:hover div:nth-child(9) {
+    animation-delay: 0.35s;
+}
+
 .headerMenu {
     display: flex;
     gap: 2em;
+    justify-content: center;
+    align-items: center;
 }
 
 .menuItem {
@@ -93,7 +111,7 @@ nav {
     padding: 0.5em 0;
     transition: color 0.3s ease, transform 0.3s ease;
     text-decoration: none;
-    color: black;
+    color: rgb(214, 214, 214);
 }
 
 .menuItem::after {
@@ -103,7 +121,7 @@ nav {
     bottom: 0;
     height: 2px;
     width: 100%;
-    background-color: black;
+    background-color: white;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease;
@@ -111,7 +129,7 @@ nav {
 }
 
 .menuItem:hover {
-    color: #1e1e1e;
+    color: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -122,12 +140,10 @@ nav {
 
 
 .extraMenu {
-    margin-right: 1.5em;
+
     display: flex;
     align-items: center;
     gap: 1em;
-    width: 370px;
-    /* background-color: royalblue; */
 }
 
 .mode {

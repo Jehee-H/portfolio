@@ -80,13 +80,27 @@ const HomepageContent = () => {
         <h2 className="experience-title">Erfahrung</h2>
         <div className="experience-container">
           <p className="experience-description">
-            Ich habe Erfahrung in der Entwicklung von Webanwendungen mit modernen Technologien wie React, Node.js und MongoDB. Ich habe an verschiedenen Projekten gearbeitet, die sowohl Frontend- als auch Backend-Entwicklung umfassen.
+            Ich habe Erfahrung in der Frontend-Entwicklung (mit Angular, React und SvelteKit) und im Backend (z. B. mit Netlify, Shopify, Supabase und PostgreSQL). In diversen Projekten war ich sowohl für das Frontend als auch das Backend verantwortlich.
           </p>
           <p className="experience-description">
-            Ich bin immer auf der Suche nach neuen Herausforderungen und Möglichkeiten, meine Fähigkeiten zu erweitern.
+            Ich suche stets neue Herausforderungen, um meine Fähigkeiten weiter auszubauen.
           </p>
         </div>
+
+        <div className="experience-logos">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Angular_Logo_SVG.svg" alt="Angular Logo" className="logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" className="logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Shopify_logo.svg" alt="Shopify Logo" className="logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg" alt="Netlify Logo" className="logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL Logo" className="logo" />
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Svelte-kit-horizontal.svg" alt="SvelteKit Logo" className="logo" />
+          <img src="https://www.vectorlogo.zone/logos/supabase/supabase-ar21.svg" alt="Supabase Logo" className="logo" />
+    
+
+        </div>
+
       </div>
+
 
       <div className="projects">
         <div className="projects-text">

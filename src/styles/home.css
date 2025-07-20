@@ -2,7 +2,12 @@
   height: 100vh;
   /* padding: 1em; */
   box-sizing: border-box;
-  background: #e7e7e7;
+  background: linear-gradient(to bottom,
+      #4e5769 0%,
+      #6e7b91 50%,
+      #4e5769 95%,
+      #4e5769 100%);
+
 }
 
 .container {
@@ -110,13 +115,39 @@
 }
 
 .hero-section-top {
-  animation: fadeInTop 1s ease-out forwards;
+  animation: fadeInTop 0.6s ease-out forwards;
+  animation-delay: 0.1s;
+  opacity: 0;
+}
+
+.hero-center {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+  animation-delay: 0.3s;
 }
 
 .hero-section-bottom {
-  animation: fadeInBottom 1s ease-out forwards;
+  animation: fadeInBottom 0.6s ease-out forwards;
+  animation-delay: 0.8s;
   opacity: 0;
-  /* wird durch animation sichtbar */
+}
+
+/* Alle Kinder innerhalb hero-center nacheinander animieren */
+.hero-center>* {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.hero-center>*:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.hero-center>*:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.hero-center>*:nth-child(3) {
+  animation-delay: 0.8s;
 }
 
 
@@ -276,4 +307,4 @@ html {
   flex-direction: column;
   color: white;
   font-family: Sora, sans-serif;
-} 
+}

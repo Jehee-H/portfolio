@@ -6,9 +6,12 @@ import HomepageContent from "../components/HomepageContent.tsx";
 import background from "../assets/background.png";
 import pb from "../assets/profilbild2.png";
 
+
+
 const Home = () => {
   return (
     <div className="home-container">
+
       <div className="wrapper">
 
         {/* <video
@@ -20,11 +23,11 @@ const Home = () => {
           playsInline
         ></video> */}
 
-        <img
+        {/* <img
           className="bgImg video-container"
           src={background}
           alt="Hintergrundbild"
-        ></img>
+        ></img> */}
 
 
         <div className="hero-content">
@@ -50,9 +53,10 @@ const Home = () => {
           </div>
 
           <div className="hero-center">
-            <img src={pb} alt="Profilbild Jehee Han" className="profile-pic" />
+
+            <img src="https://placehold.co/420x420" alt="Profilbild Jehee Han" className="profile-pic" />
             <div className="hero-text">
-              <h1>Jehee Han, 3D-Artist & Entwickler</h1>
+              <h1>Jehee Han <br/> Web-Entwickler</h1>
               <p>Willkommen auf meinem Portfolio – entdecke meine Projekte.</p>
             </div>
           </div>

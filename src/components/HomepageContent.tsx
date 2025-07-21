@@ -7,6 +7,18 @@ import KfzgutachterPic from "../assets/websitessc/kfzgutachter.png"
 import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.png"
 import MedimobilPic from "../assets/websitessc/medimobil.png"
 
+// oben in deiner Komponente:
+const logos = [
+  "https://upload.wikimedia.org/wikipedia/commons/0/07/Angular_Logo_SVG.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/e/e7/Shopify_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/9/9b/Svelte-kit-horizontal.svg",
+  "https://www.vectorlogo.zone/logos/supabase/supabase-ar21.svg",
+];
+
+
 type webList = {
   title: string;
   url: string;
@@ -87,19 +99,26 @@ const HomepageContent = () => {
           </p>
         </div>
 
-        <div className="experience-logos">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Angular_Logo_SVG.svg" alt="Angular Logo" className="logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" className="logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Shopify_logo.svg" alt="Shopify Logo" className="logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Netlify_logo.svg" alt="Netlify Logo" className="logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg" alt="PostgreSQL Logo" className="logo" />
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Svelte-kit-horizontal.svg" alt="SvelteKit Logo" className="logo" />
-          <img src="https://www.vectorlogo.zone/logos/supabase/supabase-ar21.svg" alt="Supabase Logo" className="logo" />
-    
-
+        {/* Logo-Slider-Wrapper */}
+        <div className="logo-slider-wrapper">
+          <div className="logo-slider-track">
+            <div className="logo-strip">
+              {logos.map((src, i) => (
+                <img key={i} src={src} alt="Logo" className="logo" />
+              ))}
+            </div>
+            <div className="logo-strip">
+              {logos.map((src, i) => (
+                <img key={`copy-${i}`} src={src} alt="Logo" className="logo" />
+              ))}
+            </div>
+          </div>
         </div>
 
+
+
       </div>
+
 
 
       <div className="projects">

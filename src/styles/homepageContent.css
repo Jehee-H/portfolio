@@ -1,7 +1,14 @@
 /* homepageContent.css */
 
+.wrapper-content {
+  background: linear-gradient(to bottom,
+      #333946 60%,
+
+      #16181d 100%);
+}
+
 .homepageContent {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
   padding: 4rem 2rem;
   color: #eaeaea;

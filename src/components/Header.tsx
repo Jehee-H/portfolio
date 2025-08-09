@@ -68,10 +68,10 @@ const languages = [
 const Header = () => {
   const [currentLang, setCurrentLang] = useState("de");
   const [open, setOpen] = useState(false);
-  const wrapperRef = useRef(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const onDocClick = (e) => {
+    const onDocClick = (e: { target: any; }) => {
       if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
         setOpen(false);
       }
@@ -106,8 +106,8 @@ const Header = () => {
                   aria-expanded={open}
                   aria-haspopup="menu"
                 >
-                  <span className="lang-ui-flag">{current.svg}</span>
-                  <span className="lang-ui-label">{current.label}</span>
+                  <span className="lang-ui-flag">{current?.svg}</span>
+                  <span className="lang-ui-label">{current?.label}</span>
                 </button>
 
                 <AnimatePresence>

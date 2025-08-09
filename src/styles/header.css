@@ -2,6 +2,7 @@ header {
     z-index: 999;
     position: fixed;
     width: 100%;
+
 }
 
 nav {
@@ -27,6 +28,7 @@ nav {
     display: flex;
     align-items: center;
     cursor: default;
+    color: #ffffff;
 }
 
 .logo div {
@@ -154,58 +156,83 @@ nav {
     cursor: pointer;
 }
 
-.languageBlock {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* ---------------------------
+   Language UI (namespaced)
+   --------------------------- */
+.lang-ui-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
-.langContainer {
-    width: 50px;
-    height: 50px;
-    border: solid black 2px;
-    border-radius: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    transition: width 0.3s;
-    transition-timing-function: ease;
+.lang-ui-current {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
 
-.langContainer:hover {
-    cursor: pointer;
-    width: 150px;
+.lang-ui-current:focus {
+  outline: 2px solid rgba(0,0,0,0.12);
+  outline-offset: 2px;
 }
 
-/* Standard-Zustand: Nur die aktive Sprache ist sichtbar */
-.langContainer svg {
-    opacity: 0;
-    /* transform: scale(0.8); */
-    transition: opacity 0.3s ease, transform 0.3s ease;
+.lang-ui-flag svg {
+  width: 28px;
+  height: 28px;
+  display: block;
 }
 
-/* Sichtbarkeit erhöhen, wenn hovered oder aktiv */
-.langContainer:hover svg,
-.langContainer svg.visible {
-    opacity: 1;
-    transform: scale(1);
+.lang-ui-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff; /* passt zu deinem Header-Design */
 }
 
-/* Unsichtbar machen, wenn nicht aktiv oder gehovt */
-.langContainer svg.hidden {
-    opacity: 0;
-    transform: scale(0.8);
-    display: none;
+/* animiertes, vertikales Menü */
+.lang-ui-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: -5px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 3px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  z-index: 1200;
 }
 
-/* Zusätzlicher Stil für die SVGs */
-.langContainer svg {
-    cursor: pointer;
-    margin: 0 5px;
+/* Einzelne Auswahl */
+.lang-ui-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
 }
 
-.langContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.lang-ui-option:hover {
+  background: #f5f5f5;
+}
+
+.lang-ui-option .lang-ui-label {
+  color: #111;
+  font-weight: 600;
+}
+
+/* sicherstellen, dass unsere SVGs nicht von alten Regeln versteckt werden */
+.lang-ui-wrapper svg {
+  opacity: 1 !important;
+  pointer-events: auto;
 }

@@ -40,17 +40,10 @@ const data: webList[] = [
   },
   {
     title: 'Kavak & Partner',
-    url: 'https://kavak-partner.netlify.app/',
+    url: 'https://kavak-partner.de/',
     program: 'SvelteKit, HTML, CSS',
     desc: "",
     preview: "KavaknPartnerPic",
-  },
-  {
-    title: 'Kfz Gutachtersozietät - Kavak',
-    url: 'https://kfzgutachtersozietaet.de/',
-    program: 'SvelteKit, HTML, CSS, Supabase',
-    desc: "",
-    preview: KfzgutachterPic,
   },
   {
     title: 'THM Typo3 Projekt',
@@ -114,9 +107,7 @@ const HomepageContent = () => {
 
 
         </div>
-
-
-
+        
         <div className="projects">
           <div className="projects-text">
             <h2 className="projects-title">Projekte Showcase</h2>
@@ -144,11 +135,11 @@ const HomepageContent = () => {
                     </div>
 
                     {/* Neue Infobox */}
-                    <div className="project-info">
+                    {/* <div className="project-info">
                       <h3>{project.title}</h3>
                       <p className="project-desc">{project.desc || 'Keine Beschreibung vorhanden.'}</p>
                       <p className="project-program">{project.program}</p>
-                    </div>
+                    </div> */}
                   </div>
                 </a>
               </h3>

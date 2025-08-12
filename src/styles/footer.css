@@ -2,7 +2,9 @@
     background-color: #262523;
     color: #fff;
     padding: 20px;
-
+    font-family: ClashDisplay, sans-serif;
+    font-weight: 500 !important;
+    font-size: 1.2em;
 }
 
 .footer-text{

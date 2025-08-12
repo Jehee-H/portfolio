@@ -54,21 +54,21 @@ const data: webList[] = [
 
 
   {
-    title: 'Hirameki Insight',
+    title: 'Hirameki Insight – Shopify [Auftrag]',
     url: 'https://www.hiramekiinsight.com/',
     program: 'Shopify, HTML, CSS, JavaScript',
     desc: "Hirameki Insight ist eine englischsprachige Plattform...",
     preview: HiramekiinsightPic,
   },
   {
-    title: 'THM Typo3 Projekt',
+    title: 'THM Typo3 Projekt – Typo3 [Uni Projekt]',
     url: 'https://team-f.abija.de/',
     program: 'Typo3',
     desc: 'THM-Projekt – Einführung in TYPO3 zur praxisnahen CMS-Entwicklung und modernem Webdesign.',
     preview: Typo3Pic,
   },
   {
-    title: 'Kavak & Partner',
+    title: 'Kavak & Partner – SvelteKit [Auftrag]',
     url: 'https://kavak-partner.de/',
     program: 'SvelteKit, HTML, CSS',
     desc: "",
@@ -123,6 +123,8 @@ const HomepageContent = () => {
           </div>
         </div>
 
+        <div className="black-line"></div>
+
         <div className="projects">
           <div className="projects-text">
             <h2 className="projects-title">Projekte | Showcase</h2>
@@ -130,11 +132,26 @@ const HomepageContent = () => {
           </div>
 
           <div className="projects-container">
-            {data.map((project, index) => (
-              <>
-         
-              </>
-            ))}
+            {/* Grid: Links zwei kleine Boxen, rechts eine große Box */}
+            {data.map((project, index) => {
+              if (index === 1) {
+                // Große Box rechts
+                return (
+                  <div className="project-box large" key={project.title}>
+                    <div className="project-title">{project.title}</div>
+                    <img src={project.preview} alt={project.title} />
+                  </div>
+                );
+              } else {
+                // Kleine Boxen links
+                return (
+                  <div className="project-box small" key={project.title}>
+                    <div className="project-title">{project.title}</div>
+                    <img src={project.preview} alt={project.title} />
+                  </div>
+                );
+              }
+            })}
           </div>
         </div>
 

@@ -1,3 +1,12 @@
+/* Dünne schwarze Linie mit max-width und Padding */
+.black-line {
+  width: 100%;
+  max-width: 1500px;
+  margin: 3rem auto;
+  height: 2px;
+  background: #000000;
+  opacity: 1;
+}
 /* homepageContent.css */
 
 .wrapper-content {
@@ -170,17 +179,72 @@
 
 .projects-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
   gap: 3em;
+  height: 600px;
 }
 
-.project-wrapper:nth-child(2) {
-  grid-row: span 2 / span 2;
+.project-box:hover{
+  cursor: pointer;
 }
 
-.project-wrapper:nth-child(3) {
-  grid-row-start: 2;
+.project-box.small {
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  grid-column: 1;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-box.small:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+.project-box.small:first-child {
+  grid-row: 1;
+}
+
+.project-box.small:last-child {
+  grid-row: 2;
+}
+
+.project-box.large {
+  background: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-box.large:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 16px 32px rgba(0,0,0,0.25);
+}
+.project-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  object-position: top;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  /* text-align: center; */
+  padding-left: 15px;
+  margin: 1rem 0 0.5rem 0;
+  font-family: ClashDisplay-Variable;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  
 }
 
 .projects-text {

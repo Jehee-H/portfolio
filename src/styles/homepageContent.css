@@ -1,11 +1,13 @@
 /* Dünne schwarze Linie mit max-width und Padding */
 .black-line {
-  width: 100%;
-  max-width: 1500px;
+  width: calc(100% - 3rem);
+  max-width: 1700px;
   margin: 3rem auto;
-  height: 2px;
-  background: #000000;
-  opacity: 1;
+  height: 1px;
+  background: #222;
+  opacity: 0.5;
+  border-radius: 1px;
+
 }
 /* homepageContent.css */
 

@@ -1,13 +1,6 @@
 .wrapper {
   height: 100vh;
-  /* padding: 1em; */
   box-sizing: border-box;
-  background: linear-gradient(to bottom,
-      #4e5769 0%,
-      #6e7b91 50%,
-      #4e5769 75%,
-      #333946 95%);
-
 }
 
 .container {
@@ -21,7 +14,8 @@
   gap: 5em;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: black;
+
 }
 
 .text-container {
@@ -50,45 +44,21 @@
   font-weight: 300;
 }
 
-.bgImg {
-  width: 100%;
-  height: 100%;
-  /* background-color: rgb(187, 187, 187); */
-  pointer-events: none;
-  object-fit: cover;
-  position: absolute;
-  z-index: 0;
-
-}
-
-.hero-content {
-  width: 100%;
-  height: 100%;
-  /* background-color: rgba(87, 87, 87, 0); */
-  position: absolute;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  /* top & bottom */
-  box-sizing: border-box;
-  color: white;
-  padding: 40px 50px;
-}
-
-/* Top section */
-.hero-section-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px
-}
 
 /* Bottom section */
 .hero-section-bottom {
+  position: absolute;
+  width: calc(100% - 100px);
+  height: calc(100% - 80px);
+  padding: 40px 50px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  font-size: 1.2rem;
+  animation: fadeInBottom 0.6s ease-out forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
+  font-weight: 600;
 }
 
 
@@ -128,11 +98,6 @@
   animation-delay: 0.3s;
 }
 
-.hero-section-bottom {
-  animation: fadeInBottom 0.6s ease-out forwards;
-  animation-delay: 0.8s;
-  opacity: 0;
-}
 
 /* Alle Kinder innerhalb hero-center nacheinander animieren */
 .hero-center>* {
@@ -151,7 +116,6 @@
 .hero-center>*:nth-child(3) {
   animation-delay: 0.8s;
 }
-
 
 h2 {
   font-size: 2.5em;
@@ -252,9 +216,8 @@ p {
 
 .scroll-down a {
   text-decoration: none;
-  color: white;
-  font-weight: 300;
-  font-size: 1rem;
+  color: black;
+  font-weight: 400;
   transition: all 0.3s ease;
 }
 
@@ -266,27 +229,24 @@ p {
 
 .arrow {
   font-size: 2rem;
-  animation: bounce 2s infinite;
+  display: inline-block;
+  /* wichtig für transform */
+  animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
 
   0%,
-  20%,
-  50%,
-  80%,
   100% {
     transform: translateY(0);
   }
 
-  40% {
-    transform: translateY(8px);
-  }
-
-  60% {
-    transform: translateY(4px);
+  50% {
+    transform: translateY(-10px);
+    /* nach oben */
   }
 }
+
 
 /* Optional: smooth scroll for all anchor links */
 html {
@@ -299,7 +259,7 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: white;
+  color: black;
   font-family: Sora, sans-serif;
 }
 
@@ -311,45 +271,95 @@ html {
   z-index: 1;
 }
 
+/* profile */
+
 .profile-pic {
   height: 100dvh;
   width: 100%;
   display: flex;
-  align-items: flex-end; /* Bild UND Text am unteren Rand */
+  /* nebeneinander */
   justify-content: center;
-  gap: 3rem;
-  color: white
+  align-items: center;
+  /* Text mittig */
+  gap: 0rem;
+  color: black;
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgb(160, 160, 160) 99%);
 }
 
+.profile-pic .image-wrapper {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
+
+/* Profilbild von unten reinfaden */
 .profile-pic img {
-  height: 75%; /* beliebig änderbar */
+  height: 75%;
   width: auto;
   object-fit: contain;
+  opacity: 0;
+  animation: fadeInTextUp 0.8s ease forwards;
+  animation-delay: 0.2s;
 }
 
+/* Text animieren */
 .Profile-text {
-  font-size: 7.5rem;
-  font-weight: bold;
+  font-weight: thin;
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 150px;
+  flex-direction: row;
+  gap: 0rem;
+  opacity: 0;
+  animation: fadeInDownText 1s ease-out forwards;
+  animation-delay: 0.5s;
+  margin-bottom: 100px;
+
 }
 
+/* Koreanischer Name */
 .korean-Profile {
-  font-weight: lighter !important;
-  font-size: 5rem;
-  letter-spacing: 2rem;
-  margin-bottom: -20px;
+  font-weight: 500;
+  margin-top: 10px;
+  font-size: 3.8rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  opacity: 1;
+  /* animation: fadeInDownText 0.6s ease forwards; */
+  animation-delay: 0.6s;
+  /* font-family: '100', sans-serif; */
+  color: rgb(180, 180, 180);
+  line-height: 1.0;
+  padding-right: 20px;
+  font-family: '100', sans-serif;
+}
 
+.english-Profile {
+  line-height: .8;
+  display: flex;
+  gap: 50px;
+  font-size: 8rem;
+  font-weight: bold;
+  letter-spacing: -15px;
+  opacity: 0;
+  animation: fadeInTextUp 0.6s ease forwards;
+  animation-delay: .7s;
+
+}
+
+
+.video-container {
+  opacity: .15;
 }
 
 @keyframes fadeInUpProfile {
   from {
     opacity: 0;
-    transform: translateY(50px); /* von unten */
+    transform: translateY(50px);
+    /* von unten */
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -359,36 +369,14 @@ html {
 @keyframes fadeInDownText {
   from {
     opacity: 0;
-    transform: translateY(-50px); /* von oben */
+    transform: translateY(-50px);
+    /* von oben */
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Profilbild animieren */
-.profile-pic img {
-  height: 75%;
-  width: auto;
-  object-fit: contain;
-  opacity: 0;
-  animation: fadeInUpProfile 1s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-/* Text animieren */
-.Profile-text {
-  font-size: 7.5rem;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-bottom: 150px;
-  opacity: 0;
-  animation: fadeInDownText 1s ease-out forwards;
-  animation-delay: 0.5s;
 }
 
 @keyframes fadeInTextUp {
@@ -396,42 +384,29 @@ html {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Profilbild von unten reinfaden */
-.profile-pic img {
-  height: 75%; /* beliebig änderbar */
-  width: auto;
-  object-fit: contain;
-  opacity: 0;
-  animation: fadeInTextUp 0.8s ease forwards;
-  animation-delay: 0.2s; /* kommt zuerst */
+.profile-pic {
+  animation: "gradientBG 7s ease infinite";
 }
 
-/* Koreanischer Name */
-.korean-Profile {
-  font-weight: lighter !important;
-  font-size: 5rem;
-  letter-spacing: 2rem;
-  margin-bottom: -20px;
+.introduction {
+  font-size: 2rem;
   opacity: 0;
-  animation: fadeInTextUp 0.8s ease forwards;
-  animation-delay: 0.6s; /* kommt nach Bild */
+  animation: fadeInTextUp 0.6s ease forwards;
+  animation-delay: .6s;
 }
 
-/* Englischer Name */
-.Profile-text > div:last-child {
-  font-size: 7.5rem;
-  font-weight: bold;
+.introduction-second {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 2rem;
   opacity: 0;
-  animation: fadeInTextUp 0.8s ease forwards;
-  animation-delay: 1s; /* kommt zuletzt */
-}
-
-.video-container{
-  opacity: .15;
+  animation: fadeInTextUp 0.6s ease forwards;
+  animation-delay: .8s;
 }

@@ -5,6 +5,7 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 
+
 import ProjectDetail from "./pages/ProjectDetail.tsx";
 
 import Home from "./pages/Home";

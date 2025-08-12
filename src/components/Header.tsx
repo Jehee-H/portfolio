@@ -11,8 +11,8 @@ const languages = [
     name: "Deutsch",
     svg: (
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-           viewBox="0 0 512 512" shapeRendering="geometricPrecision" textRendering="geometricPrecision"
-           imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd" className="lang-ui-svg">
+        viewBox="0 0 512 512" shapeRendering="geometricPrecision" textRendering="geometricPrecision"
+        imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd" className="lang-ui-svg">
         <g fillRule="nonzero">
           <path fill="#999" d="M256 0c70.68 0 134.69 28.66 181.01 74.99C483.34 121.31 512 185.32 512 256c0 70.68-28.66 134.69-74.99 181.01C390.69 483.34 326.68 512 256 512c-70.68 0-134.69-28.66-181.01-74.99C28.66 390.69 0 326.68 0 256c0-70.68 28.66-134.69 74.99-181.01C121.31 28.66 185.32 0 256 0z" />
           <path fill="#fff" d="M256 19.48c65.3 0 124.46 26.48 167.25 69.27l1.09 1.18c42.14 42.71 68.18 101.37 68.18 166.06 0 65.31-26.5 124.46-69.29 167.25l-1.18 1.09c-42.73 42.16-101.4 68.19-166.05 68.19-65.23 0-124.37-26.51-167.18-69.33-42.84-42.74-69.33-101.89-69.33-167.2 0-65.31 26.48-124.45 69.27-167.24C131.55 45.96 190.7 19.48 256 19.48z" />
@@ -29,8 +29,8 @@ const languages = [
     name: "English",
     svg: (
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-           viewBox="0 0 512 512" shapeRendering="geometricPrecision" textRendering="geometricPrecision"
-           imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd" className="lang-ui-svg">
+        viewBox="0 0 512 512" shapeRendering="geometricPrecision" textRendering="geometricPrecision"
+        imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd" className="lang-ui-svg">
         <g fillRule="nonzero">
           <path fill="#999" d="M256 0c70.68 0 134.69 28.66 181.01 74.99C483.34 121.31 512 185.32 512 256c0 70.68-28.66 134.69-74.99 181.01C390.69 483.34 326.68 512 256 512c-70.68 0-134.69-28.66-181.01-74.99C28.66 390.69 0 326.68 0 256c0-70.68 28.66-134.69 74.99-181.01C121.31 28.66 185.32 0 256 0z" />
           <path fill="#fff" d="M256 19.48c65.3 0 124.46 26.48 167.25 69.27l1.09 1.18c42.14 42.71 68.18 101.37 68.18 166.06 0 65.31-26.5 124.46-69.29 167.25l-1.18 1.09c-42.73 42.16-101.4 68.19-166.05 68.19-65.23 0-124.37-26.51-167.18-69.33-42.84-42.74-69.33-101.89-69.33-167.2 0-65.31 26.48-124.45 69.27-167.24C131.55 45.96 190.7 19.48 256 19.48z" />
@@ -47,8 +47,8 @@ const languages = [
     name: "한국어",
     svg: (
       <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-           viewBox="0 0 512 512" shapeRendering="geometricPrecision" textRendering="geometricPrecision"
-           imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd" className="lang-ui-svg">
+        viewBox="0 0 512 512" shapeRendering="geometricPrecision" textRendering="geometricPrecision"
+        imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd" className="lang-ui-svg">
         <g fillRule="nonzero">
           <path fill="#999" d="M256 0c70.68 0 134.69 28.66 181.01 74.99C483.34 121.31 512 185.32 512 256c0 70.68-28.66 134.69-74.99 181.01C390.69 483.34 326.68 512 256 512c-70.68 0-134.69-28.66-181.01-74.99C28.66 390.69 0 326.68 0 256c0-70.68 28.66-134.69 74.99-181.01C121.31 28.66 185.32 0 256 0z" />
           <path fill="#fff" d="M256 19.48c65.31 0 124.45 26.5 167.23 69.28 42.79 42.79 69.28 101.93 69.28 167.23 0 65.31-26.49 124.47-69.28 167.25-42.78 42.79-101.92 69.28-167.23 69.28-65.3 0-124.46-26.49-167.24-69.28-42.79-42.78-69.28-101.94-69.28-167.25 0-65.3 26.49-124.44 69.28-167.23C131.54 45.98 190.7 19.48 256 19.48z" />
@@ -84,65 +84,70 @@ const Header = () => {
   const otherLangs = languages.filter(l => l.code !== currentLang);
 
   return (
-    <header>
-      <div className="hero-section-top">
-        <div className='logo'>
-          <div>J</div><div>e</div><div>h</div><div>e</div><div>e</div><div>_</div><div>H</div><div>a</div><div>n</div>
-        </div>
+    <>
+      <header>
+        <div className="hero-section-top">
+          <div className='logo'>
+            <div>J</div><div>e</div><div>h</div><div>e</div><div>e</div><div>_</div><div>H</div><div>a</div><div>n</div>
+          </div>
 
-        <div className='headerMenu'>
-          <a href='/' className='menuItem'>HOME</a>
-          <a href='/projects' className='menuItem'>PROJECTS</a>
-          <a href='/' className='menuItem'>ABOUT ME</a>
-          <a className='menuItem'>LINKS</a>
+          <div className='headerMenu'>
+            <a href='/' className='menuItem'>HOME</a>
+            <a href='/projects' className='menuItem'>PROJECTS</a>
+            <a href='/' className='menuItem'>ABOUT ME</a>
+            <a className='menuItem'>LINKS</a>
 
-          <div className='extraMenu'>
-            <div className="languageBlock">
-              <div className="lang-ui-wrapper" ref={wrapperRef}>
-                <button
-                  type="button"
-                  className="lang-ui-current"
-                  onClick={() => setOpen(o => !o)}
-                  aria-expanded={open}
-                  aria-haspopup="menu"
-                >
-                  <span className="lang-ui-flag">{current?.svg}</span>
-                  <span className="lang-ui-label">{current?.label}</span>
-                </button>
+            <div className='extraMenu'>
+              <div className="languageBlock">
+                <div className="lang-ui-wrapper" ref={wrapperRef}>
+                  <button
+                    type="button"
+                    className="lang-ui-current"
+                    onClick={() => setOpen(o => !o)}
+                    aria-expanded={open}
+                    aria-haspopup="menu"
+                  >
+                    {/* <span className="lang-ui-flag">{current?.svg}</span> */}
+                    <span className="lang-ui-label">{current?.label}</span>
+                  </button>
 
-                <AnimatePresence>
-                  {open && (
-                    <motion.div
-                      className="lang-ui-menu"
-                      initial={{ opacity: 0, y: -8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -6 }}
-                      transition={{ duration: 0.18 }}
-                      role="menu"
-                    >
-                      {otherLangs.map(l => (
-                        <motion.button
-                          key={l.code}
-                          className="lang-ui-option"
-                          onClick={() => { setCurrentLang(l.code); setOpen(false); }}
-                          whileTap={{ scale: 0.98 }}
-                          role="menuitem"
-                        >
-                          <span className="lang-ui-flag">{l.svg}</span>
-                          <span className="lang-ui-label">{l.label}</span>
-                        </motion.button>
-                      ))}
-                    </motion.div>
-                  )}
-                </AnimatePresence>
+                  <AnimatePresence>
+                    {open && (
+                      <motion.div
+                        className="lang-ui-menu"
+                        initial={{ opacity: 0, y: -8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -6 }}
+                        transition={{ duration: 0.18 }}
+                        role="menu"
+                      >
+                        {otherLangs.map(l => (
+                          <motion.button
+                            key={l.code}
+                            className="lang-ui-option"
+                            onClick={() => { setCurrentLang(l.code); setOpen(false); }}
+                            whileTap={{ scale: 0.98 }}
+                            role="menuitem"
+                          >
+                            {/* <span className="lang-ui-flag">{l.svg}</span> */}
+                            <span className="lang-ui-label">{l.label}</span>
+                          </motion.button>
+                        ))}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
               </div>
-            </div>
 
-            <div className='talk btn'>Let's Talk</div>
+
+            </div>
           </div>
         </div>
+      </header>
+      <div className="test-header">
+        <div className='talk btn'>Let's Talk</div>
       </div>
-    </header>
+    </>
   );
 };
 

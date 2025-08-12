@@ -1,19 +1,13 @@
 /* homepageContent.css */
 
 .wrapper-content {
-  background: linear-gradient(to bottom,
-      #333946 60%,
-
-      #16181d 100%);
+  font-size: 1.2rem;
 }
 
-.homepageContent {
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-  color: #eaeaea;
-  font-family: 'Sora', sans-serif;
-  background: linear-gradient(to bottom, #2a2a2a, #1a1a1a);
+.homepageContent h2 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: ClashDisplay-Variable, sans-serif;
 }
 
 /* Allgemeine Stile für alle Content-Sections */
@@ -24,6 +18,12 @@
   animation: fadeInUp 0.8s ease forwards;
 }
 
+.d-content {
+  background: #000000;
+  background: linear-gradient(354deg, rgba(0, 0, 0, 1) 0%, rgba(24, 24, 24, 1) 61%, rgba(56, 56, 56, 1) 91%);
+  width: 100%;
+}
+
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -32,38 +32,39 @@
 }
 
 /* About Me Section */
+
 .aboutMe {
+  animation-delay: 0.2s;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 110px 2rem 4rem 2rem;
+  color: #eaeaea;
+  font-family: 'Sora', sans-serif;
   display: flex;
   gap: 4rem;
-  align-items: center;
+  align-items: flex-start;
+  flex-direction: row;
+
 }
 
 .aboutMe-image {
   flex: 0 0 350px;
   border-radius: 16px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5),
     0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  height: 400px;
+  background: linear-gradient(90deg, #4f46e5, #10b981);
+  position: relative;
 }
 
 .aboutMe-img {
   width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.3s ease;
-}
-
-.aboutMe-img:hover {
-  transform: scale(1.03);
-}
-
-.aboutMe-container {
-  flex: 1;
+  position: absolute;
+  bottom: 0;
 }
 
 .aboutMe-title {
-  font-size: 2.5rem;
-  font-weight: 700;
   margin-bottom: 1.5rem;
   color: #ffffff;
   position: relative;
@@ -80,49 +81,106 @@
   border-radius: 2px;
 }
 
-.aboutMe-text {
+.homepageContent * p {
   line-height: 1.6;
+  font-size: 1.5rem;
+  font-family: 'Satoshi-Variable', ;
+  font-weight: 200;
 }
 
 .aboutMe-description {
-  font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: #cbd5e1;
 }
 
 /* Experience Section */
 .experience {
-  background: #333333;
   padding: 3rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
-  overflow: hidden;
+  max-width: 1500px;
+  margin: 0 auto;
+  animation-delay: 0.4s;
 }
 
 .experience-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 2rem;
-  color: #ffffff;
   text-align: center;
 }
 
-.experience-container {
-  max-width: 800px;
-  margin: 0 auto;
+.exp-text {
   line-height: 1.6;
 }
 
-.experience-description {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: #d1d5db;
-  text-align: center;
+.exp-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
 }
+
+/* CSS für den horizontalen Logo-Slider */
+.exp-logos {
+  display: flex;
+  animation: scroll-logos 20s linear infinite;
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  /* margin: 0 auto; */
+}
+
+.exp-logo-wrapper {
+  border: 1px solid rgb(172, 172, 172);
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 170px;
+}
+
+.exp-logo {
+  height: 3rem;
+  width: auto;
+  aspect-ratio: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.exp-logo:hover {
+  transform: scale(1.1);
+}
+
 
 /* Projects Section */
 .projects {
   margin-top: 6rem;
+  animation-delay: 0.6s;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 3rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 3em;
+}
+
+.project-wrapper:nth-child(2) {
+  grid-row: span 2 / span 2;
+}
+
+.project-wrapper:nth-child(3) {
+  grid-row-start: 2;
 }
 
 .projects-text {
@@ -135,7 +193,7 @@
 .projects-title {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #000000;
   position: relative;
 }
 
@@ -148,123 +206,6 @@
   height: 4px;
   background: linear-gradient(90deg, #4f46e5, #10b981);
   border-radius: 2px;
-}
-
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 2rem;
-}
-
-.project-card-horizontal {
-  display: block;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-  transition: all 0.3s ease;
-  position: relative;
-  height: 250px;
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.project-card-horizontal:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
-}
-
-.project-img-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.project-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.project-card-horizontal:hover .project-img {
-  transform: scale(1.05);
-}
-
-.project-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-
-.project-info h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.project-desc {
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
-  color: #d1d5db;
-}
-
-.project-program {
-  font-size: 0.8rem;
-  opacity: 0.7;
-  font-weight: 300;
-  color: #9ca3af;
-}
-
-/* Animation delays für die Sections */
-.aboutMe {
-  animation-delay: 0.2s;
-}
-
-.experience {
-  animation-delay: 0.4s;
-}
-
-.projects {
-  animation-delay: 0.6s;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .aboutMe {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .aboutMe-image {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 400px;
-  }
-}
-
-@media (max-width: 768px) {
-  .homepageContent {
-    padding: 2rem 1rem;
-  }
-
-  .projects-container {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-text {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  .experience {
-    padding: 2rem 1.5rem;
-  }
 }
 
 /* Button Styling */
@@ -300,62 +241,12 @@
   }
 }
 
-.aboutMe {
-  animation: fadeScaleIn 0.6s ease-out forwards;
-  animation-delay: 0.2s;
-  opacity: 0;
-}
-
-
-
-
-/* CSS für den horizontalen Logo-Slider */
-.experience-logos {
-  display: flex;
-  gap: 2rem;
-  overflow: hidden;
-  align-items: center;
-  /* Animation: 20s von rechts nach links */
-  animation: scroll-logos 20s linear infinite;
-  overflow: visible;
-}
-
-
-.logo-slider-wrapper {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  padding: 1.5rem 0;
-}
-
-.logo-slider-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-loop 25s linear infinite;
-}
-
-.logo-strip {
-  display: flex;
-  gap: 2rem; /* Abstand zwischen Logos */
-  padding-inline: 1rem; /* Abstand zum Rand */
-}
-
-.logo {
-  height: 3rem; 
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
-}
-
-.logo:hover {
-  transform: scale(1.1);
-}
-
 @keyframes scroll-loop {
   0% {
     transform: translateX(0%);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
-

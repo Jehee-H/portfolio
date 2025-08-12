@@ -1,0 +1,26 @@
+.Profile-text {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 3rem; /* kannst du anpassen */
+  color: #fff;
+  perspective: 800px; /* wichtig für 3D-Effekt */
+
+  transition: transform 0.1s ease-out;
+  will-change: transform;
+}
+
+/* Optional: sanftes Fade-in wie in deiner alten Animation */
+@keyframes fadeInDownText {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

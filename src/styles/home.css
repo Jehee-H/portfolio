@@ -299,8 +299,8 @@ html {
   width: auto;
   object-fit: contain;
   opacity: 0;
-  animation: fadeInTextUp 0.8s ease forwards;
   animation-delay: 0.2s;
+  animation: fadeInTextUp 0.6s ease forwards;
 }
 
 /* Text animieren */
@@ -310,8 +310,7 @@ html {
   justify-content: center;
   flex-direction: row;
   gap: 0rem;
-  opacity: 0;
-  animation: fadeInDownText 1s ease-out forwards;
+  opacity: 1;
   animation-delay: 0.5s;
   margin-bottom: 100px;
 }
@@ -332,6 +331,39 @@ html {
   line-height: 1.0;
   padding-right: 20px;
   font-family: '100', sans-serif;
+}
+
+.korean-Profile div {
+  animation: rollIn 1s ease forwards;
+  opacity: 0;
+  transform: translateX(-100%) rotate(-360deg);
+  transform-origin: left center;
+}
+
+.korean-Profile div:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.korean-Profile div:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.korean-Profile div:nth-child(3) {
+  animation-delay: .6s;
+}
+
+@keyframes rollIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%) ;
+    transform-origin:  center;
+    /* Drehpunkt setzen! */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0) ;
+  }
 }
 
 .english-Profile {
@@ -390,9 +422,6 @@ html {
   }
 }
 
-.profile-pic {
-  animation: fadeInTextUp 0.6s ease forwards;
-}
 
 .introduction {
   font-size: 2rem;
@@ -414,4 +443,3 @@ html {
   font-family: ClashDisplay, sans-serif;
   font-weight: 600 !important;
 }
-

@@ -1,11 +1,12 @@
+/* Bereinigte CSS für Projekte */
 .projectsPage {
     margin: 0 auto;
-    padding-top: 8rem;
+    padding-top: 5rem;
     display: flex;
     flex-direction: column;
     gap: 1.5em;
     align-items: center;
-    height: calc(100vh - 8rem - 132px);
+    height: calc(100dvh - 212px + 3rem);
 }
 
 .projectsPage-header {
@@ -14,18 +15,9 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-}
+    padding: 0 3rem;
+    box-sizing: border-box;
 
-.projectsPage-header .projectsPage-title {
-    background-color: #22222200;
-
-}
-
-.projectsPage-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
 }
 
 .projectsPage-filters {
@@ -51,128 +43,59 @@
     color: white;
 }
 
-/* === Project Card === */
 .projectsPage-container {
-    width: 100%;
-    background-color: #b4b4b465;
-    padding: 2em;
+    background-color: #a0a0a0e3;
+    padding: 2em 0em;
     border-radius: .2em;
-    max-width: 1200px;
+    height: auto;
+    overflow: visible;
     height: 100%;
-    overflow: auto;
-    max-height: 100vh;
-
-
     scrollbar-gutter: stable;
+    overflow-y: auto;
+    width: 100%;
 
+    /* oder eine andere feste/maximale Höhe */
 }
 
 .projectsPage-card-container {
-    width: 100%;
+    padding: 0px 50px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-
+    margin: 0 auto;
+    cursor: pointer;
 }
 
-
-.projectsPage-card {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    border-radius: 1rem;
+.projectsPage-box {
+    background: #222;
+    transition: transform 0.3s, box-shadow 0.3s, scale 0.3s;
+    height: 280px;
     overflow: hidden;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    border: 1px solid #22222233;
+
 }
 
-.projectsPage-card:hover {
-    transform: translateY(-5px);
-}
-
-/* === Image Wrapper === */
-.projectsPage-img-wrapper {
-    position: relative;
+.projectsPage-box img {
     width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    overflow: hidden;
 }
 
-/* === Image === */
-.projectsPage-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    transition: transform 0.4s ease, filter 0.4s ease;
+.projectPage-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding-left: 15px;
+    margin: 0.5rem 0 0.5rem 0;
+    font-family: ClashDisplay;
+    font-weight: 500;
+    letter-spacing: 0.5px;
 }
 
-.projectsPage-card:hover .projectsPage-img {
-    transform: scale(1.03);
-    filter: brightness(0.85);
-}
-
-/* === Title Overlay === */
-.projectsPage-title-overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 1rem;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: #fff;
-    box-sizing: border-box;
+.projectsPage-box:hover {
+    scale: 1.05;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
 }
 
 .projectsPage-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0.25em 0.5em;
-    border-radius: 0.25rem;
-    display: inline-block;
-}
-
-/* === Info Panel === */
-.projectsPage-info {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    max-width: 320px;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    padding: 1.2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform 0.4s ease, opacity 0.4s ease;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.projectsPage-card:hover .projectsPage-info {
-    opacity: 1;
-    transform: translateX(0%);
-    pointer-events: auto;
-}
-
-/* === Description / Program / Category === */
-.projectsPage-desc,
-.projectsPage-program,
-.projectsPage-category {
-    font-size: 1rem;
-    margin-bottom: 0.75em;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
-}
-
-.test {
-    display: block;
-    height: 200px;
+    font-family: ClashDisplay;
+    font-size: 3.5rem;
+    font-weight: 400;
 }

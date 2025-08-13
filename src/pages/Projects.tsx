@@ -26,7 +26,7 @@ const Projects = () => {
     return (
         <div className="projectsPage">
             <div className="projectsPage-header">
-                <h2 className="projectsPage-title">Projekte Showcase</h2>
+                <h2 className="projectsPage-title">Projekte | Showcase</h2>
                 <div className="projectsPage-filters">
                     {categories.map((category) => (
                         <button
@@ -43,36 +43,12 @@ const Projects = () => {
 
             <div className="projectsPage-container">
                 <div className="projectsPage-card-container">
-
-
                     {filteredProjects.map((project) => (
-                        <motion.div
-                            key={project.id}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 0.3 }}
-                            className="projectsPage-card"
-                        >
-                            <Link to={`/projects/${project.id}`}>
-                                <div className="projectsPage-img-wrapper">
-                                    <img
-                                        src={project.preview}
-                                        alt={`Preview von ${project.title}`}
-                                        className="projectsPage-img"
-                                    />
-                                    <div className="projectsPage-title-overlay">
-                                        <h3 className="projectsPage-title">{project.title}</h3>
-                                    </div>
-                                    <div className="projectsPage-info">
-                                        <p className="projectsPage-desc">
-                                            {project.desc || "Keine Beschreibung vorhanden."}
-                                        </p>
-                                        <p className="projectsPage-program">{project.program}</p>
-                                        <p className="projectsPage-category">{project.category}</p>
-                                    </div>
-                                </div>
-                            </Link>
-                        </motion.div>
+                        <div className="projectsPage-box" key={project.title}>
+                            <div className="projectPage-title">{project.title} - {project.program} <span>[{project.category}]</span> </div>
+                            <img src={project.preview} alt={project.title} />
+                        </div>
+
                     ))}
                 </div>
             </div>

@@ -8,21 +8,21 @@ import gsap from "gsap";
 import { useEffect } from "react";
 
 const Home = () => {
-  useEffect(() => {
-    gsap.fromTo(
-      ".korean-Profile div",
-      { x: -200, rotation: -360, opacity: 1 }, // Startposition
-      {
-        x: 0,               // Endposition in der Mitte
-        rotation: 0,      // 2 volle Drehungen
-        opacity: 1,         // Sichtbar werden
-        duration: 1.8,      // Dauer pro Zeichen
-        stagger: 0.2,       // Nacheinander animieren
-        ease: "power3.out", // Sanft abbremsen
-        transformOrigin: "center center"
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     ".korean-Profile div",
+  //     { x: -200, rotation: -360, opacity: 1 }, // Startposition
+  //     {
+  //       x: 0,               // Endposition in der Mitte
+  //       rotation: 0,      // 2 volle Drehungen
+  //       opacity: 1,         // Sichtbar werden
+  //       duration: 1.8,      // Dauer pro Zeichen
+  //       stagger: 0.2,       // Nacheinander animieren
+  //       ease: "power3.out", // Sanft abbremsen
+  //       transformOrigin: "center center"
+  //     }
+  //   );
+  // }, []);
   return (
     <div className="home-container">
 
@@ -61,9 +61,6 @@ const Home = () => {
               <div className="introduction-second">Wilkommen auf mein Portfolio</div>
             </div>
           </div>
-
-
-
         </div>
 
         <div className="hero-content">

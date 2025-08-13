@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 import ProjectDetail from "./pages/ProjectDetail.tsx";
@@ -12,7 +12,8 @@ import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-function App() {
+function AppContent() {
+  const location = useLocation();
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
@@ -22,20 +23,23 @@ function App() {
       once: true,
     });
 
-    const timer = setTimeout(() => {
+    if (location.pathname === "/") {
+      const timer = setTimeout(() => {
+        setShowSplash(false);
+      }, 1200);
+      return () => clearTimeout(timer);
+    } else {
       setShowSplash(false);
-    }, 1200); // 1,5 Sekunden Splash-Dauer
+    }
+  }, [location.pathname]);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (showSplash) {
+  if (showSplash && location.pathname === "/") {
     return (
       <motion.div
         key="splash"
         initial={{ opacity: 1 }}
         animate={{ opacity: 0 }}
-        transition={{ delay: .8, duration: 0.3 }}
+        transition={{ delay: 0.8, duration: 0.3 }}
         style={{
           display: "flex",
           alignItems: "center",
@@ -48,32 +52,39 @@ function App() {
           fontFamily: "ClashDisplay, sans-serif",
         }}
       >
-    <div style={{
-      animation: "zoom-in 3.5s linear",
-      userSelect: "none",
-    }}>
-      WILKOMMEN
-    </div>
-
+        <div
+          style={{
+            animation: "zoom-in 3.5s linear",
+            userSelect: "none",
+          }}
+        >
+          WILKOMMEN
+        </div>
       </motion.div>
     );
   }
 
   return (
     <>
-      <Router>
-        <Header />
-        <AnimatePresence mode="wait">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:projectId" element={<ProjectDetail />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-      </Router>
+      <Header />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:projectId" element={<ProjectDetail />} />
+        </Routes>
+      </AnimatePresence>
+      <Footer />
     </>
-  )
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
+  );
 }
 
 export default App;

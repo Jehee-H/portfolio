@@ -58,7 +58,7 @@ function AppContent() {
             userSelect: "none",
           }}
         >
-          WILKOMMEN
+          WILLKOMMEN
         </div>
       </motion.div>
     );

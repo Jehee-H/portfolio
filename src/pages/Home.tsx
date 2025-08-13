@@ -58,7 +58,7 @@ const Home = () => {
                 <div>JEHEE</div>
                 <div>HAN</div>
               </div>
-              <div className="introduction-second">Wilkommen auf mein Portfolio</div>
+              <div className="introduction-second">Willkommen auf mein Portfolio</div>
             </div>
           </div>
         </div>

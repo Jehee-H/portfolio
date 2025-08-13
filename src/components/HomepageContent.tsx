@@ -126,32 +126,36 @@ const HomepageContent = () => {
         <div className="black-line"></div>
 
         <div className="projects">
-          <div className="projects-text">
-            <h2 className="projects-title">Projekte | Showcase</h2>
-            <a href="/projects" className="btn" >Alle Projekte</a>
-          </div>
+          <div className="asd">
 
-          <div className="projects-container">
-            {/* Grid: Links zwei kleine Boxen, rechts eine große Box */}
-            {data.map((project, index) => {
-              if (index === 1) {
-                // Große Box rechts
-                return (
-                  <div className="project-box large" key={project.title}>
-                    <div className="project-title">{project.title}</div>
-                    <img src={project.preview} alt={project.title} />
-                  </div>
-                );
-              } else {
-                // Kleine Boxen links
-                return (
-                  <div className="project-box small" key={project.title}>
-                    <div className="project-title">{project.title}</div>
-                    <img src={project.preview} alt={project.title} />
-                  </div>
-                );
-              }
-            })}
+
+            <div className="projects-text">
+              <h2 className="projects-title">Projekte | Showcase</h2>
+              <a href="/projects" className="btn" >Alle Projekte</a>
+            </div>
+
+            <div className="projects-container">
+              {/* Grid: Links zwei kleine Boxen, rechts eine große Box */}
+              {data.map((project, index) => {
+                if (index === 1) {
+                  // Große Box rechts
+                  return (
+                    <div className="project-box large" key={project.title}>
+                      <div className="project-title">{project.title}</div>
+                      <img src={project.preview} alt={project.title} />
+                    </div>
+                  );
+                } else {
+                  // Kleine Boxen links
+                  return (
+                    <div className="project-box small" key={project.title}>
+                      <div className="project-title">{project.title}</div>
+                      <img src={project.preview} alt={project.title} />
+                    </div>
+                  );
+                }
+              })}
+            </div>
           </div>
         </div>
 

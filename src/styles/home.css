@@ -528,13 +528,13 @@ html {
     margin-top: 5px;
   }
 
-  .hero-section-bottom{
+  .hero-section-bottom {
     padding: 5px 5px;
     width: auto;
 
   }
 
-  .scroll-down{
+  .scroll-down {
     display: none;
   }
 }
@@ -562,14 +562,15 @@ html {
     margin-top: 5px;
   }
 
-  .hero-section-bottom{
+  .hero-section-bottom {
     padding: 5px 5px;
     width: auto;
     height: calc(100% - 10px);
   }
 
-  .scroll-down{
+  .scroll-down {
     display: none;
   }
 
 }
+

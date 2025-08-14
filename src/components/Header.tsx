@@ -70,6 +70,8 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
     const onDocClick = (e: { target: any; }) => {
       if (wrapperRef.current && !wrapperRef.current.contains(e.target)) {
@@ -93,8 +95,8 @@ const Header = () => {
 
           <div className='headerMenu'>
             <a href='/' className='menuItem'>HOME</a>
-            <a href='/projects' className='menuItem'>PROJECTS</a>
-            <a href='/' className='menuItem'>ABOUT ME</a>
+            <a href='/projects' className='menuItem'>PROJEKTE</a>
+            <a href='/' className='menuItem'>ÜBER MICH</a>
             <a className='menuItem'>LINKS</a>
 
             <div className='extraMenu'>
@@ -110,7 +112,6 @@ const Header = () => {
                     {/* <span className="lang-ui-flag">{current?.svg}</span> */}
                     <span className="lang-ui-label">{current?.label}</span>
                   </button>
-
                   <AnimatePresence>
                     {open && (
                       <motion.div
@@ -140,11 +141,28 @@ const Header = () => {
               </div>
             </div>
           </div>
+          <div className="menu_icon" onClick={() => setMenuOpen(o => !o)}>
+            <span className={menuOpen ? "menu-span-animate" : "menu-span-hide"}></span>
+            <span></span>
+            <span></span>
+            {/* <span className={menuOpen ? "menu-span-animate" : "menu-span-hide"}></span> */}
+          </div>
         </div>
+
       </header>
       <div className="test-header">
-        <div className='talk btn'>Let's Talk</div>
+        <div className='talk btn'>Kontaktieren</div>
+        <div className={`headerMenuMobile${menuOpen ? ' open' : ''}`}>
+          <div ></div>
+          <a href='/' className='menuItem'>HOME</a>
+          <a href='/projects' className='menuItem'>PROJEKTE</a>
+          <a href='/' className='menuItem'>ÜBER MICH</a>
+          <a className='menuItem'>LINKS</a>
+          <a className='menuItem'>KONTAKTIEREN</a>
+          <div className='menuItem'>SPRACHE: {current?.label}</div>
+        </div>
       </div>
+
     </>
   );
 };

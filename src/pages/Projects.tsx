@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { projects } from "../data/projectData";
-import { motion } from "framer-motion";
 import "../styles/projects.css";
 
 type CategoryKey = "Alle" | "Auftrag" | "Uni-Projekt" | "Eigene Projekt";
@@ -44,10 +42,10 @@ const Projects = () => {
             <div className="projectsPage-container">
                 <div className="projectsPage-card-container">
                     {filteredProjects.map((project) => (
-                        <div className="projectsPage-box" key={project.title}>
+                        <a className="projectsPage-box" key={project.title} href={project.url} target="_blank" rel="noopener noreferrer">
                             <div className="projectPage-title">{project.title} - {project.program} <span>[{project.category}]</span> </div>
                             <img src={project.preview} alt={project.title} />
-                        </div>
+                        </a>
 
                     ))}
                 </div>

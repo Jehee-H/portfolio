@@ -251,3 +251,27 @@ header {
     padding: 8px 12px;
     border: 1px solid #ffffff;
 }
+
+@media screen and (max-width: 1000px) {
+    .headerMenu {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    .hero-section-top {
+        padding-left: 10px;
+        padding-top: 0px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .test-header {
+        padding-right: 10px;
+        height: 70px;
+    }
+
+}

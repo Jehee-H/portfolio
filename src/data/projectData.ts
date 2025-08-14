@@ -4,6 +4,7 @@ import FlexboxDefensePic from "../assets/websitessc/Flexbox-Defense.png";
 import KfzgutachterPic from "../assets/websitessc/kfzgutachter.png";
 import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.png";
 import MedimobilPic from "../assets/websitessc/medimobil.png";
+import JeheeSite from "../assets/websitessc/JeheeSite.png";
 
 
 
@@ -62,5 +63,14 @@ export const projects = [
     program: "Typo3",
     url: "https://team-f.abija.de/",
     category: "Uni-Projekt",
+  },
+    {
+    id: "portolio-page",
+    title: "Jehee Han Portfolio",
+    desc: "Meine Portfolio Seite.",
+    preview: JeheeSite,
+    program: "React",
+    url: "https://jeheehan.com",
+    category: "Eigene Projekt",
   },
 ];

@@ -59,6 +59,7 @@
   animation-delay: 0.8s;
   opacity: 0;
   font-weight: 600;
+  z-index: 6;
 }
 
 
@@ -211,7 +212,7 @@ p {
   transform: translateX(-50%);
   text-align: center;
   animation: fadeIn 1.5s ease forwards 0.8s;
-
+  z-index: 6;
 }
 
 .scroll-down a {
@@ -230,7 +231,6 @@ p {
 .arrow {
   font-size: 2rem;
   display: inline-block;
-  /* wichtig für transform */
   animation: bounce 1s infinite;
 }
 
@@ -243,12 +243,9 @@ p {
 
   50% {
     transform: translateY(-10px);
-    /* nach oben */
   }
 }
 
-
-/* Optional: smooth scroll for all anchor links */
 html {
   scroll-behavior: smooth;
 }
@@ -277,13 +274,10 @@ html {
   height: 100dvh;
   width: 100%;
   display: flex;
-  /* nebeneinander */
   justify-content: center;
   align-items: center;
-  /* Text mittig */
   gap: 0rem;
   color: black;
-
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 60%, rgb(160, 160, 160) 99%);
 }
 
@@ -291,6 +285,12 @@ html {
   display: flex;
   align-items: flex-end;
   height: 100%;
+  z-index: 5;
+}
+
+.profile-pic,
+.profile-pic .image-wrapper {
+  z-index: 5;
 }
 
 /* Profilbild von unten reinfaden */
@@ -305,7 +305,6 @@ html {
 
 /* Text animieren */
 .Profile-text {
-  font-weight: thin;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -355,14 +354,14 @@ html {
 @keyframes rollIn {
   0% {
     opacity: 0;
-    transform: translateX(-100%) ;
-    transform-origin:  center;
+    transform: translateX(-100%);
+    transform-origin: center;
     /* Drehpunkt setzen! */
   }
 
   100% {
     opacity: 1;
-    transform: translateX(0) ;
+    transform: translateX(0);
   }
 }
 
@@ -376,9 +375,7 @@ html {
   opacity: 0;
   animation: fadeInTextUp 0.6s ease forwards;
   animation-delay: .7s;
-
 }
-
 
 .video-container {
   opacity: .15;
@@ -442,4 +439,136 @@ html {
 .copyright {
   font-family: ClashDisplay, sans-serif;
   font-weight: 600 !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .english-Profile {
+    font-size: 5.5rem;
+    letter-spacing: -9px;
+  }
+
+  .introduction,
+  .introduction-second {
+    font-size: 1.35rem;
+  }
+
+  .korean-Profile {
+    font-size: 2.5rem;
+    padding-right: 10px;
+    margin-top: 5px;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .korean-Profile {
+    display: none;
+  }
+
+  .Profile-text {
+    z-index: 5;
+    top: 125px;
+  }
+
+  .profile-pic img {
+    height: 70%;
+
+  }
+
+  .image-wrapper,
+  .Profile-text {
+    position: absolute;
+  }
+
+  .test-header .btn {
+    display: none !important;
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+
+  .Profile-text {
+    z-index: 5;
+    top: 125px;
+  }
+
+  .profile-pic img {
+    height: 70%;
+
+  }
+
+  .image-wrapper,
+  .Profile-text {
+    position: absolute;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+
+  .Profile-text {
+    top: 80px;
+  }
+
+  .english-Profile {
+    font-size: 3.5rem;
+    letter-spacing: -6px;
+  }
+
+  .introduction,
+  .introduction-second {
+    font-size: 1rem;
+  }
+
+  .korean-Profile {
+    font-size: 2.5rem;
+    padding-right: 10px;
+    margin-top: 5px;
+  }
+
+  .hero-section-bottom{
+    padding: 5px 5px;
+    width: auto;
+
+  }
+
+  .scroll-down{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .Profile-text {
+    top: 55px;
+  }
+
+  .english-Profile {
+    font-size: 3rem;
+    letter-spacing: -6px;
+    gap: 1rem;
+  }
+
+  .introduction,
+  .introduction-second {
+    font-size: .8rem;
+  }
+
+  .korean-Profile {
+    font-size: 2.5rem;
+    padding-right: 10px;
+    margin-top: 5px;
+  }
+
+  .hero-section-bottom{
+    padding: 5px 5px;
+    width: auto;
+    height: calc(100% - 10px);
+  }
+
+  .scroll-down{
+    display: none;
+  }
+
 }

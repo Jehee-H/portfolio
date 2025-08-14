@@ -138,8 +138,6 @@ const Header = () => {
                   </AnimatePresence>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>

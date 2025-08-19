@@ -4,20 +4,27 @@ import FlexboxDefensePic from "../assets/websitessc/Flexbox-Defense.png";
 import KfzgutachterPic from "../assets/websitessc/kfzgutachter.png";
 import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.png";
 import MedimobilPic from "../assets/websitessc/medimobil.png";
+import DigitalStartklar from "../assets/websitessc/digitalstartklar.png";
 import JeheeSite from "../assets/websitessc/JeheeSite.png";
-
-
-
 
 export const projects = [
   {
-    id: "medimobil",
-    title: "Medimobil-Giessen",
-    desc: "Eine Webseite für ein lokales Pflegeunternehmen.",
-    preview: MedimobilPic,
-    program: "Vue, TypeScript | Mobile First Design",
-    url: "https://Medimobil-Giessen.de",
+    id: "kfzgutachter",
+    title: "Kavak Gutachtersozietät",
+    desc: "Business-Webseite für KFZ-Gutachter mit Supabase Backend.",
+    preview: KfzgutachterPic,
+    program: "SvelteKit, Supabase",
+    url: "https://kfzgutachtersozietaet.de/",
     category: "Auftrag",
+  },
+  {
+    id: "typo3-projekt",
+    title: "THM Typo3 Projekt",
+    desc: "Eine Teamprojekt-Webseite im Rahmen meines Studiums.",
+    preview: Typo3Pic,
+    program: "Typo3",
+    url: "https://team-f.abija.de/",
+    category: "Uni-Projekt",
   },
   {
     id: "hiramekiinsight",
@@ -38,12 +45,21 @@ export const projects = [
     category: "Auftrag",
   },
   {
-    id: "kfzgutachter",
-    title: "Kavak Gutachtersozietät",
-    desc: "Business-Webseite für KFZ-Gutachter mit Supabase Backend.",
-    preview: KfzgutachterPic,
-    program: "SvelteKit, Supabase",
-    url: "https://kfzgutachtersozietaet.de/",
+    id: "digital-startklar",
+    title: "Digital Startklar - Work in Progress/Mockup",
+    desc: ".",
+    preview: DigitalStartklar,
+    program: "Vue, TypeScript",
+    url: "https://digitalstartklar.de/",
+    category: "Eigene Projekt",
+  },
+  {
+    id: "medimobil",
+    title: "Medimobil-Giessen",
+    desc: "Eine Webseite für ein lokales Pflegeunternehmen.",
+    preview: MedimobilPic,
+    program: "Vue, TypeScript | Mobile First Design",
+    url: "https://Medimobil-Giessen.de",
     category: "Auftrag",
   },
   {
@@ -56,15 +72,6 @@ export const projects = [
     category: "Uni-Projekt",
   },
   {
-    id: "typo3-projekt",
-    title: "THM Typo3 Projekt",
-    desc: "Eine Teamprojekt-Webseite im Rahmen meines Studiums.",
-    preview: Typo3Pic,
-    program: "Typo3",
-    url: "https://team-f.abija.de/",
-    category: "Uni-Projekt",
-  },
-    {
     id: "portolio-page",
     title: "Jehee Han Portfolio",
     desc: "Meine Portfolio Seite.",

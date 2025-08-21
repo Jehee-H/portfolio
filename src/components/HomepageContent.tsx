@@ -140,18 +140,34 @@ const HomepageContent = () => {
                 if (index === 1) {
                   // Große Box rechts
                   return (
-                    <div className="project-box large" key={project.title}>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link project-box large"
+                      key={project.title}
+                    >
+
                       <div className="project-title">{project.title}</div>
                       <img src={project.preview} alt={project.title} />
-                    </div>
+
+                    </a>
                   );
                 } else {
                   // Kleine Boxen links
                   return (
-                    <div className="project-box small" key={project.title}>
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="project-link project-box small"
+                      key={project.title}
+                    >
+
                       <div className="project-title">{project.title}</div>
                       <img src={project.preview} alt={project.title} />
-                    </div>
+
+                    </a>
                   );
                 }
               })}

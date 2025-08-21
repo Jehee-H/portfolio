@@ -4,7 +4,7 @@
 import "../styles/home.css";
 import HomepageContent from "../components/HomepageContent.tsx";
 import me from "../assets/my_ugly_ass.png";
-import gsap from "gsap";
+
 import { useEffect } from "react";
 
 const Home = () => {

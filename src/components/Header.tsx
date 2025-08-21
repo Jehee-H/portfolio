@@ -151,7 +151,7 @@ const Header = () => {
 
       </header>
       <div className="test-header">
-        <div className='talk btn'>Kontaktieren</div>
+        <div className='talk btn'>Kontakt</div>
         <div className={`headerMenuMobile${menuOpen ? ' open' : ''}`}>
           <div ></div>
           <a href='/' className='menuItem'>HOME</a>

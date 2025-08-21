@@ -47,7 +47,7 @@ function AppContent() {
           height: "100vh",
           backgroundColor: "#0a0a0a",
           color: "#fff",
-          fontSize: "8rem",
+          fontSize: "9vw", // responsive Schriftgröße
           fontWeight: "bold",
           fontFamily: "ClashDisplay, sans-serif",
         }}

@@ -1,11 +1,11 @@
-import KavaknPartnerPic from "../assets/websitessc/KavaknPartner.png";
-import Typo3Pic from "../assets/websitessc/Typo3-Medieninformatik.png";
-import FlexboxDefensePic from "../assets/websitessc/Flexbox-Defense.png";
-import KfzgutachterPic from "../assets/websitessc/kfzgutachter.png";
-import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.png";
-import MedimobilPic from "../assets/websitessc/medimobil.png";
-import DigitalStartklar from "../assets/websitessc/digitalstartklar.png";
-import JeheeSite from "../assets/websitessc/JeheeSite.png";
+import KavaknPartnerPic from "../assets/websitessc/KavaknPartner.webp";
+import Typo3Pic from "../assets/websitessc/Typo3-Medieninformatik.webp";
+import FlexboxDefensePic from "../assets/websitessc/Flexbox-Defense.webp";
+import KfzgutachterPic from "../assets/websitessc/kfzgutachter.webp";
+import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.webp";
+import MedimobilPic from "../assets/websitessc/medimobil.webp";
+import DigitalStartklar from "../assets/websitessc/digitalstartklar.webp";
+import JeheeSite from "../assets/websitessc/JeheeSite.webp";
 
 export const projects = [
   {

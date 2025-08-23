@@ -1,13 +1,13 @@
 
 import "../styles/homepageContent.css";
 
-import Typo3Pic from "../assets/websitessc/Typo3-Medieninformatik.png"
+import Typo3Pic from "../assets/websitessc/Typo3-Medieninformatik.webp"
 
-import KavakPartnerPic from "../assets/websitessc/KavaknPartner.png"
-import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.png"
-import MedimobilPic from "../assets/websitessc/medimobil.png"
+import KavakPartnerPic from "../assets/websitessc/KavaknPartner.webp"
+import HiramekiinsightPic from "../assets/websitessc/hiramekiinsight.webp"
+import MedimobilPic from "../assets/websitessc/medimobil.webp"
 import { div } from "framer-motion/client";
-import meAboutMe from "../assets/haesslichkeit.png"
+import meAboutMe from "../assets/haesslichkeit.webp"
 
 // oben in deiner Komponente:
 const logos = [

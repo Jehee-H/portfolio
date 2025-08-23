@@ -3,7 +3,7 @@
 // import pbImg from "../assets/me.png";
 import "../styles/home.css";
 import HomepageContent from "../components/HomepageContent.tsx";
-import me from "../assets/my_ugly_ass.png";
+import me from "../assets/my_ugly_ass-1.webp";
 
 import { useEffect } from "react";
 

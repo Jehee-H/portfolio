@@ -121,6 +121,9 @@
 
 .exp-text {
   line-height: 1.6;
+  gap: 1.5em;
+  display: flex;
+  flex-direction: column;
 }
 
 .exp-container {
@@ -169,6 +172,33 @@
 .exp-logo:hover {
   transform: scale(1.1);
 }
+
+/* Tools Section */
+
+.tools {
+  background: #DBE0EF;
+  background: linear-gradient(90deg, rgba(219, 224, 239, 1) 0%, rgba(255, 255, 255, 1) 100%);
+  margin-bottom: 3rem;
+  border-top: 1px solid #8f8f8f;
+  border-bottom: 1px solid #8f8f8f;
+}
+
+.tools-container {
+  padding: 2rem 2rem;
+  max-width: 1500px;
+  margin: 0 auto;
+  animation-delay: 0.4s;
+  color: black;
+}
+
+.tools-title {
+  font-size: 2.5rem !important;
+  font-weight: 700;
+  margin-bottom: 2rem;
+
+}
+
+.tools-logos {}
 
 /* Projects Section */
 .projects {
@@ -377,7 +407,8 @@
   }
 
   .experience,
-  .aboutMe {
+  .aboutMe,
+  .tools-container {
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 2rem;
@@ -393,11 +424,12 @@
     box-sizing: border-box;
   }
 
-  .projects-text{
-    padding: 1rem 1rem 0rem 1rem; ;
+  .projects-text {
+    padding: 1rem 1rem 0rem 1rem;
+    ;
   }
 
-  .projects-text a{
+  .projects-text a {
     font-size: .8rem;
   }
 
@@ -405,7 +437,7 @@
     padding: 0px;
   }
 
-  .project-title{
+  .project-title {
     font-size: 1rem;
   }
 
@@ -450,4 +482,3 @@
     padding-top: 2rem;
   }
 }
-

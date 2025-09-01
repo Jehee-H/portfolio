@@ -135,7 +135,7 @@ const HomepageContent = () => {
           <div className="tools-container">
             <h2 className="tools-title ">Tools & Technologien</h2>
             <div className="tools-logos">
-              VS Code · Git/GitHub · Figma · Photoshop · Canva · Blender · Davinci Resolve · Ableton Live  · Fl Studio
+              VS Code · Git/GitHub · Figma · Photoshop · Canva · Blender · Davinci Resolve · Ableton Live
             </div>
           </div>
         </div>

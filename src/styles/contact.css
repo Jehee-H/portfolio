@@ -1,0 +1,41 @@
+.contact-container {
+    min-height: calc(100vh - 83px - 90px);
+    width: 100%;
+    box-sizing: initial;
+    padding-top: 90px;
+    color: white;
+    /* background-color: rgb(8, 8, 8); */
+    background: #1a1a1a;
+    /* background: radial-gradient(circle, rgba(119, 124, 140, 1) 0%, rgba(8, 8, 8, 1) 100%); */
+}
+
+.contact-content{
+    padding: 0px 70px;
+}
+
+.contact-content h2 {
+    font-family: ClashDisplay;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.contact-content p {
+    font-size: 2rem;
+}
+
+.contact-content a {
+    font-size: 2rem;
+    color: white;
+}
+
+.contact-links{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .contact-container {
+        min-height: calc(100vh - 112px - 90px);
+    }
+}

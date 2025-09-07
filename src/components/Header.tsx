@@ -172,14 +172,14 @@ const Header = () => {
 
       </header>
       <div className="test-header">
-        <div className='talk btn'>{t('contact')}</div>
+        <a href='/contact' className='talk btn'>{t('contact')}</a>
         <div className={`headerMenuMobile${menuOpen ? ' open' : ''}`}>
           <div ></div>
           <a href='/' className='menuItem'>{t('home')}</a>
           <a href='/projects' className='menuItem'>{t('projects')}</a>
           <a href='/' className='menuItem'>{t('about')}</a>
-          <a className='menuItem'>{t('links')}</a>
-          <a className='menuItem'>{t('contact')}</a>
+          <a href='/links' className='menuItem'>{t('links')}</a>
+          <a href='/contact' className='menuItem'>{t('contact')}</a>
           <div className='menuItem'>{t('language')}: {current?.label}</div>
         </div>
       </div>

@@ -8,6 +8,7 @@ import Projects from "./pages/Projects.tsx";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Links from "./pages/Links.tsx";
+import Contact from "./pages/contact.tsx";
 
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
@@ -77,6 +78,8 @@ function AppContent() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
           <Route path="/links" element={<Links />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </AnimatePresence>
       <Footer />

@@ -15,7 +15,7 @@ export const projects = [
     preview: KfzgutachterPic,
     program: "SvelteKit, Supabase",
     url: "https://kfzgutachtersozietaet.de/",
-    category: "Auftrag",
+    category: "commission",
   },
   {
     id: "typo3-projekt",
@@ -24,7 +24,7 @@ export const projects = [
     preview: Typo3Pic,
     program: "Typo3",
     url: "https://team-f.abija.de/",
-    category: "Uni-Projekt",
+    category: "uni-projects",
   },
   {
     id: "hiramekiinsight",
@@ -33,7 +33,7 @@ export const projects = [
     preview: HiramekiinsightPic,
     program: "Shopify",
     url: "https://www.hiramekiinsight.com/",
-    category: "Auftrag",
+    category: "commission",
   },
   {
     id: "kavak-partner",
@@ -42,7 +42,7 @@ export const projects = [
     preview: KavaknPartnerPic,
     program: "SvelteKit",
     url: "https://kavak-partner.netlify.app/",
-    category: "Auftrag",
+    category: "commission",
   },
   {
     id: "digital-startklar",
@@ -51,7 +51,7 @@ export const projects = [
     preview: DigitalStartklar,
     program: "Vue, TypeScript",
     url: "https://digitalstartklar.de/",
-    category: "Eigene Projekt",
+    category: "personal-projects",
   },
   {
     id: "medimobil",
@@ -60,7 +60,7 @@ export const projects = [
     preview: MedimobilPic,
     program: "Vue, TypeScript | Mobile First Design",
     url: "https://Medimobil-Giessen.de",
-    category: "Auftrag",
+    category: "commission",
   },
   {
     id: "flexbox-defense",
@@ -69,7 +69,7 @@ export const projects = [
     preview: FlexboxDefensePic,
     program: "HTML, CSS, JavaScript, GSAP",
     url: "https://d4ni3l2402.github.io/FlexboxDefense/index.html",
-    category: "Uni-Projekt",
+    category: "uni-projects",
   },
   {
     id: "portolio-page",
@@ -78,6 +78,6 @@ export const projects = [
     preview: JeheeSite,
     program: "React",
     url: "https://jeheehan.com",
-    category: "Eigene Projekt",
+    category: "personal-projects",
   },
 ];

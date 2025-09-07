@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import '../styles/footer.css';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { t } = useTranslation('footer');
+  
   return (
     <motion.div
       className="footer"
@@ -11,8 +14,8 @@ const Header = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="footer-text">
-        <p>&copy; 2025 Jehee Han</p>
-        <p>Contact: jeheehan.contact@gmail.com</p>
+        <p>&copy; 2025 {t('copyright')}</p>
+        <p>{t('contact')}</p>
         <div className="footer-logos">
           <a href="https://www.linkedin.com/in/jehee-han-673a382b8/" target="_blank" rel="noopener noreferrer">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="#ffffff">

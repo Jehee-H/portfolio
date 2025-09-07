@@ -4,6 +4,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import '../styles/header.css';
 import '../styles/home.css';
 
+// Sprache
+
+import { useTranslation } from 'react-i18next';
+
+
 const languages = [
   {
     code: "de",
@@ -66,11 +71,15 @@ const languages = [
 ];
 
 const Header = () => {
-  const [currentLang, setCurrentLang] = useState("de");
+  const [currentLang, setCurrentLang] = useState(() => localStorage.getItem('lang') || "de");
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const { i18n } = useTranslation();
+
+  const { t } = useTranslation('header');
 
   useEffect(() => {
     const onDocClick = (e: { target: any; }) => {
@@ -81,6 +90,13 @@ const Header = () => {
     document.addEventListener("click", onDocClick);
     return () => document.removeEventListener("click", onDocClick);
   }, []);
+
+  useEffect(() => {
+    const savedLang = localStorage.getItem('lang');
+    if (savedLang && savedLang !== i18n.language) {
+      i18n.changeLanguage(savedLang);
+    }
+  }, [i18n]);
 
   const current = languages.find(l => l.code === currentLang);
   const otherLangs = languages.filter(l => l.code !== currentLang);
@@ -94,10 +110,10 @@ const Header = () => {
           </div>
 
           <div className='headerMenu'>
-            <a href='/' className='menuItem'>HOME</a>
-            <a href='/projects' className='menuItem'>PROJEKTE</a>
-            <a href='/' className='menuItem'>ÜBER MICH</a>
-            <a className='menuItem'>LINKS</a>
+            <a href='/' className='menuItem'>{t('home')}</a>
+            <a href='/projects' className='menuItem'>{t('projects')}</a>
+            <a href='/' className='menuItem'>{t('about')}</a>
+            <a className='menuItem'>{t('links')}</a>
 
             <div className='extraMenu'>
               <div className="languageBlock">
@@ -126,7 +142,12 @@ const Header = () => {
                           <motion.button
                             key={l.code}
                             className="lang-ui-option"
-                            onClick={() => { setCurrentLang(l.code); setOpen(false); }}
+                            onClick={() => {
+                              setCurrentLang(l.code);
+                              i18n.changeLanguage(l.code);
+                              localStorage.setItem('lang', l.code); // Sprache merken
+                              setOpen(false);
+                            }}
                             whileTap={{ scale: 0.98 }}
                             role="menuitem"
                           >
@@ -151,15 +172,15 @@ const Header = () => {
 
       </header>
       <div className="test-header">
-        <div className='talk btn'>Kontakt</div>
+        <div className='talk btn'>{t('contact')}</div>
         <div className={`headerMenuMobile${menuOpen ? ' open' : ''}`}>
           <div ></div>
-          <a href='/' className='menuItem'>HOME</a>
-          <a href='/projects' className='menuItem'>PROJEKTE</a>
-          <a href='/' className='menuItem'>ÜBER MICH</a>
-          <a className='menuItem'>LINKS</a>
-          <a className='menuItem'>KONTAKTIEREN</a>
-          <div className='menuItem'>SPRACHE: {current?.label}</div>
+          <a href='/' className='menuItem'>{t('home')}</a>
+          <a href='/projects' className='menuItem'>{t('projects')}</a>
+          <a href='/' className='menuItem'>{t('about')}</a>
+          <a className='menuItem'>{t('links')}</a>
+          <a className='menuItem'>{t('contact')}</a>
+          <div className='menuItem'>{t('language')}: {current?.label}</div>
         </div>
       </div>
 

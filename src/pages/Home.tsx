@@ -4,10 +4,14 @@
 import "../styles/home.css";
 import HomepageContent from "../components/HomepageContent.tsx";
 import me from "../assets/my_ugly_ass-1.webp";
+import { useTranslation } from 'react-i18next';
 
 import { useEffect } from "react";
 
 const Home = () => {
+  const { t } = useTranslation('');
+  const { t: ft } = useTranslation('footer');
+
   // useEffect(() => {
   //   gsap.fromTo(
   //     ".korean-Profile div",
@@ -38,7 +42,7 @@ const Home = () => {
             </div>
 
             <div className="copyright">
-              &#169; {new Date().getFullYear()} Jehee Han
+              &#169; {new Date().getFullYear()} {ft('copyright')}
             </div>
           </div>
           <div className="image-wrapper">
@@ -53,12 +57,11 @@ const Home = () => {
             </div>
 
             <div>
-              <div className="introduction">Hallo, ich bin</div>
+              <div className="introduction">{t('hero-content.line1')}</div>
               <div className="english-Profile">
-                <div>JEHEE</div>
-                <div>HAN</div>
+                <div>{t('hero-content.name')}</div>
               </div>
-              <div className="introduction-second">Willkommen auf mein Portfolio</div>
+              <div className="introduction-second">{t('hero-content.line2')}</div>
             </div>
           </div>
         </div>

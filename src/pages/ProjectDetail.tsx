@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { projects } from "../data/projectData";
+import { useTranslation } from 'react-i18next';
 
 const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();

@@ -1,5 +1,6 @@
 
 import "../styles/homepageContent.css";
+import { useTranslation } from 'react-i18next';
 
 import Typo3Pic from "../assets/websitessc/Typo3-Medieninformatik.webp"
 
@@ -77,6 +78,9 @@ const data: webList[] = [
 ];
 
 const HomepageContent = () => {
+
+    const { t } = useTranslation('');
+
   return (
     <div className="wrapper-content">
       <div className="homepageContent">
@@ -84,12 +88,13 @@ const HomepageContent = () => {
         <div className="d-content">
           <div className="aboutMe content " id="about">
             <div className="aboutMe-container">
-              <h2 className="aboutMe-title">Über mich</h2>
+              <h2 className="aboutMe-title">{t('aboutme-content.title')}</h2>
               <div className="aboutMe-text">
                 <p className="aboutMe-description">
-                  Ich studiere derzeit Medieninformatik an der THM und interessiere mich besonders für die Verbindung von Webentwicklung und Design. Dabei geht es mir darum, nicht nur funktionale, sondern auch benutzerfreundliche und ansprechende Lösungen umzusetzen.                </p>
+                  {t('aboutme-content.line1')}
+                </p>
                 <p className="aboutMe-description">
-                  In meiner Freizeit entwickle ich Webseiten für kleine Unternehmen und probiere neue Technologien aus, um meine Kenntnisse kontinuierlich zu erweitern.
+                  {t('aboutme-content.line2')}
                 </p>
               </div>
             </div>
@@ -100,20 +105,20 @@ const HomepageContent = () => {
         </div>
 
         <div className="experience">
-          <h2 className="experience-title">Erfahrung</h2>
+          <h2 className="experience-title">{t('experience.title')}</h2>
           <div className="exp-container">
             <div className="exp-text">
               <p className="experience-description">
-                Während meines Studiums der Medieninformatik konnte ich erste praktische Erfahrung mit React und Angular sammeln. Im Rahmen von Projekten habe ich gelernt, Benutzeroberflächen zu entwickeln und moderne Frameworks einzusetzen.
+                {t('experience.line1')}
               </p>
               <p className="experience-description">
-                Darüber hinaus habe ich durch eigene Projekte meine Kenntnisse erweitert, insbesondere mit SvelteKit. In diesem Zusammenhang habe ich auch kleinere Erfahrungen mit Netlify, Supabase und Shopify gesammelt, die mir ein grundlegendes Verständnis für Hosting, Datenbanken und E-Commerce-Plattformen vermittelt haben.
+                {t('experience.line2')}
               </p>
               <p className="experience-description">
-                Zusätzlich habe ich in der Hochschule mit PostgreSQL gearbeitet und gelernt, Datenbanken zu modellieren und in Anwendungen einzubinden.
+                {t('experience.line3')}
               </p>
               <p>
-                Meine bisherigen Projekte geben mir eine solide Grundlage, auf der ich aufbauen möchte. Ich sehe mich noch am Anfang meiner Entwicklung, bin aber hoch motiviert, mein Wissen kontinuierlich zu vertiefen und praxisnah weiterzulernen.
+                {t('experience.line4')}
               </p>
             </div>
 
@@ -133,7 +138,7 @@ const HomepageContent = () => {
 
         <div className="tools">
           <div className="tools-container">
-            <h2 className="tools-title ">Tools & Technologien</h2>
+            <h2 className="tools-title ">{t('tools-title')}</h2>
             <div className="tools-logos">
               VS Code · Git/GitHub · Figma · Photoshop · Canva · Blender · Davinci Resolve · Ableton Live
             </div>
@@ -145,8 +150,8 @@ const HomepageContent = () => {
         <div className="projects">
           <div className="">
             <div className="projects-text">
-              <h2 className="projects-title">Projekte | Showcase</h2>
-              <a href="/projects" className="btn" >Alle Projekte</a>
+              <h2 className="projects-title">{t('projects.title')}</h2>
+              <a href="/projects" className="btn" >{t('projects.all')}</a>
             </div>
 
             <div className="projects-container">

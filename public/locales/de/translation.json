@@ -1,0 +1,25 @@
+{
+    "welcome": "WILLKOMMEN",
+    "hero-content": {
+        "line1": "Hallo, ich bin",
+        "name": "JEHEE HAN",
+        "line2": "Wilkommen auf mein Portfolio."
+    },
+    "aboutme-content": {
+        "title": "Über mich",
+        "line1": "Ich studiere derzeit Medieninformatik an der THM und interessiere mich besonders für die Verbindung von Webentwicklung und Design. Dabei geht es mir darum, nicht nur funktionale, sondern auch benutzerfreundliche und ansprechende Lösungen umzusetzen.",
+        "line2": "In meiner Freizeit entwickle ich Webseiten für kleine Unternehmen und probiere neue Technologien aus, um meine Kenntnisse kontinuierlich zu erweitern."
+    },
+    "experience": {
+        "title": "Erfahrung",
+        "line1": "Während meines Studiums der Medieninformatik konnte ich erste praktische Erfahrung mit React und Angular sammeln. Im Rahmen von Projekten habe ich gelernt, Benutzeroberflächen zu entwickeln und moderne Frameworks einzusetzen.",
+        "line2": "Darüber hinaus habe ich durch eigene Projekte meine Kenntnisse erweitert, insbesondere mit SvelteKit. In diesem Zusammenhang habe ich auch kleinere Erfahrungen mit Netlify, Supabase und Shopify gesammelt, die mir ein grundlegendes Verständnis für Hosting, Datenbanken und E-Commerce-Plattformen vermittelt haben.",
+        "line3": "Zusätzlich habe ich in der Hochschule mit PostgreSQL gearbeitet und gelernt, Datenbanken zu modellieren und in Anwendungen einzubinden.",
+        "line4": "Meine bisherigen Projekte geben mir eine solide Grundlage, auf der ich aufbauen möchte. Ich sehe mich noch am Anfang meiner Entwicklung, bin aber hoch motiviert, mein Wissen kontinuierlich zu vertiefen und praxisnah weiterzulernen."
+    },
+    "tools-title": "Tools & Technologien",
+    "projects": {
+        "title": "Projekte | Showcase",
+        "all": "Alle Projekte"
+    }
+}

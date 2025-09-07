@@ -11,10 +11,13 @@ import Footer from "./components/Footer";
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useTranslation } from 'react-i18next';
 
 function AppContent() {
   const location = useLocation();
   const [showSplash, setShowSplash] = useState(true);
+
+    const { t } = useTranslation();
 
   useEffect(() => {
     AOS.init({
@@ -58,7 +61,7 @@ function AppContent() {
             userSelect: "none",
           }}
         >
-          WILLKOMMEN
+          {t('welcome')}
         </div>
       </motion.div>
     );

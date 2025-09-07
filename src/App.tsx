@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects.tsx";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Links from "./pages/Links.tsx";
 
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
@@ -75,6 +76,7 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:projectId" element={<ProjectDetail />} />
+          <Route path="/links" element={<Links />} />
         </Routes>
       </AnimatePresence>
       <Footer />

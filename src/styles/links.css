@@ -1,0 +1,17 @@
+.links-container {
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: initial;
+    padding: 90px 50px;
+    color: white;
+    /* background-color: rgb(8, 8, 8); */
+    background: #1a1a1a;
+    /* background: radial-gradient(circle, rgba(119, 124, 140, 1) 0%, rgba(8, 8, 8, 1) 100%); */
+
+}
+
+.links-content h2 {
+    font-family: ClashDisplay;
+    font-size: 3.5rem;
+    font-weight: 700;
+}

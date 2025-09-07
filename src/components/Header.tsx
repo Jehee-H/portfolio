@@ -112,8 +112,8 @@ const Header = () => {
           <div className='headerMenu'>
             <a href='/' className='menuItem'>{t('home')}</a>
             <a href='/projects' className='menuItem'>{t('projects')}</a>
-            <a href='/' className='menuItem'>{t('about')}</a>
-            <a className='menuItem'>{t('links')}</a>
+            {/* <a href='/#about' className='menuItem'>{t('about')}</a> */}
+            {/* <a href='/links' className='menuItem'>{t('links')}</a> */}
 
             <div className='extraMenu'>
               <div className="languageBlock">

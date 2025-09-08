@@ -9,8 +9,9 @@ i18n
   .use(HttpApi)
   .init({
     fallbackLng: 'de',
+    lng: 'de',
     debug: true,
-    ns: ['translation', 'footer'],
+    ns: ['translation', 'footer', 'header', 'projects'],
     defaultNS: 'translation',
     interpolation: { escapeValue: false },
     backend: {

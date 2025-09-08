@@ -71,13 +71,12 @@ const languages = [
 ];
 
 const Header = () => {
-  const [currentLang, setCurrentLang] = useState(() => localStorage.getItem('lang') || "de");
+  const { i18n } = useTranslation();
+  const [currentLang, setCurrentLang] = useState(i18n.language || "de");
   const [open, setOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const { i18n } = useTranslation();
 
   const { t } = useTranslation('header');
 
@@ -92,11 +91,9 @@ const Header = () => {
   }, []);
 
   useEffect(() => {
-    const savedLang = localStorage.getItem('lang');
-    if (savedLang && savedLang !== i18n.language) {
-      i18n.changeLanguage(savedLang);
-    }
-  }, [i18n]);
+    setCurrentLang(i18n.language);
+  }, [i18n.language]);
+
 
   const current = languages.find(l => l.code === currentLang);
   const otherLangs = languages.filter(l => l.code !== currentLang);
@@ -143,9 +140,8 @@ const Header = () => {
                             key={l.code}
                             className="lang-ui-option"
                             onClick={() => {
+                              i18n.changeLanguage(l.code);  // i18next schreibt automatisch i18nextLng
                               setCurrentLang(l.code);
-                              i18n.changeLanguage(l.code);
-                              localStorage.setItem('lang', l.code); // Sprache merken
                               setOpen(false);
                             }}
                             whileTap={{ scale: 0.98 }}
@@ -174,13 +170,25 @@ const Header = () => {
       <div className="test-header">
         <a href='/contact' className='talk btn'>{t('contact')}</a>
         <div className={`headerMenuMobile${menuOpen ? ' open' : ''}`}>
-          <div ></div>
+          <div></div>
           <a href='/' className='menuItem'>{t('home')}</a>
           <a href='/projects' className='menuItem'>{t('projects')}</a>
           <a href='/' className='menuItem'>{t('about')}</a>
           <a href='/links' className='menuItem'>{t('links')}</a>
           <a href='/contact' className='menuItem'>{t('contact')}</a>
-          <div className='menuItem'>{t('language')}: {current?.label}</div>
+          <div
+            className="menuItem"
+            onClick={() => {
+              const currentIndex = languages.findIndex(l => l.code === currentLang);
+              const nextIndex = (currentIndex + 1) % languages.length; // nächstes Element, zurück zu 0 am Ende
+              const nextLang = languages[nextIndex].code;
+
+              i18n.changeLanguage(nextLang);
+              setCurrentLang(nextLang);
+            }}
+          >
+            {t('language')}: {current?.label}
+          </div>
         </div>
       </div>
 

@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(HttpApi)
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'de',
     debug: true,
     ns: ['translation', 'footer'],
     defaultNS: 'translation',

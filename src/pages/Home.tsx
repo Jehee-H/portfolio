@@ -6,11 +6,25 @@ import HomepageContent from "../components/HomepageContent.tsx";
 import me from "../assets/my_ugly_ass-1.webp";
 import { useTranslation } from 'react-i18next';
 
+import { useRef } from "react";
+// import { Volume2 } from "lucide-react"; // modernes Icon-Set (falls du lucide-react nutzt)
+import sampleAudio from "../assets/JeheeAussprache.wav"; // deine Audio-Datei importieren
+
+import speaker from "../assets/speaker.svg"
+
+
 import { useEffect } from "react";
 
 const Home = () => {
-  const { t } = useTranslation('');
+  const { t, i18n } = useTranslation('');
   const { t: ft } = useTranslation('footer');
+  const audioRef = useRef<HTMLAudioElement | null>(null); // <- Ref für <audio>
+
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.volume = 0.35; // Wert zwischen 0 (leise) und 1 (laut)
+    }
+  }, []);
 
   // useEffect(() => {
   //   gsap.fromTo(
@@ -29,7 +43,6 @@ const Home = () => {
   // }, []);
   return (
     <div className="home-container">
-
       <div className="wrapper">
 
         <div className="profile-pic">
@@ -45,30 +58,56 @@ const Home = () => {
               &#169; {new Date().getFullYear()} {ft('copyright')}
             </div>
           </div>
+
           <div className="image-wrapper">
             <img src={me} alt="Profilbild Jehee Han" />
           </div>
+
           <div className="Profile-text">
-
-            <div className="korean-Profile">
-              <div>한</div>
-              <div>재</div>
-              <div>희</div>
-            </div>
-
-            <div>
-              <div className="introduction">{t('hero-content.line1')}</div>
-              <div className="english-Profile">
-                <div>{t('hero-content.name')}</div>
+            {/* Nur wenn Koreanisch aktiv ist */}
+            {(i18n.language != "kr") && (
+              <div className="korean-Profile">
+                <div>한</div>
+                <div>재</div>
+                <div>희</div>
               </div>
-              <div className="introduction-second">{t('hero-content.line2')}</div>
-            </div>
+            )}
+
+            {/* Nur wenn Deutsch oder Englisch aktiv ist */}
+            {(i18n.language === "de" || i18n.language === "en") && (
+              <div>
+                <div className="introduction">{t('hero-content.line1')}</div>
+                <div className="english-Profile">
+                  <div>JEHEE</div>
+                  <div>HAN</div>
+
+                  {/* Lautsprecher-Button */}
+                  <button
+                    className="speakerButton"
+                    onClick={() => audioRef.current?.play()}
+                  >
+                    <img src={speaker} alt="Play Pronunciation" />
+                  </button>
+
+                  <audio ref={audioRef} src={sampleAudio} />
+                </div>
+                <div className="introduction-second">{t('hero-content.line2')}</div>
+              </div>
+            )}
+            {(i18n.language === "kr") && (
+              <div className="korean-intro">
+                <div className="introduction">안녕하세요, 저는</div>
+                <div className="english-Profile">
+                  <div>한재희</div>
+                  <div>입니다</div>
+                </div>
+                <div className="introduction-second">제 포트폴리오에 방문해 주셔서 감사합니다.</div>
+              </div>
+            )}
           </div>
         </div>
 
-        <div className="hero-content">
-
-        </div>
+        <div className="hero-content"></div>
       </div>
 
       <HomepageContent />

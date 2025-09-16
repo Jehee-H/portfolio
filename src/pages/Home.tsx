@@ -22,9 +22,9 @@ const Home = () => {
 
   useEffect(() => {
     if (audioRef.current) {
-      audioRef.current.volume = 0.25; // Wert zwischen 0 (leise) und 1 (laut)
+      audioRef.current.volume = 0.25;
     }
-  }, []);
+  }, [i18n.language]); // <-- Abhängig von der Sprache!
 
   // useEffect(() => {
   //   gsap.fromTo(

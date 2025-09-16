@@ -8,7 +8,7 @@ import Projects from "./pages/Projects.tsx";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Links from "./pages/Links.tsx";
-import Contact from "./pages/contact.tsx";
+import Contact from "./pages/Contact.tsx";
 
 import { useEffect, useState } from 'react';
 import AOS from 'aos';

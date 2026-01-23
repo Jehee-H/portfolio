@@ -22,23 +22,11 @@ const logos = [
   },
   {
     name: "SvelteKit",
-    url: "https://a.storyblok.com/f/88751/1702x2049/619c584101/svelte_logo.png/m/1702x2049/"
+    url: "https://upload.wikimedia.org/wikipedia/commons/1/1b/Svelte_Logo.svg"
   },
   {
     name: "Shopify",
     url: "https://cdn.iconscout.com/icon/free/png-512/free-shopify-226579.png?f=webp&w=256"
-  },
-  {
-    name: "Netlify",
-    url: "https://www.svgrepo.com/show/376339/netlify.svg"
-  },
-  {
-    name: "PostgreSQL",
-    url: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg"
-  },
-  {
-    name: "Supabase",
-    url: "https://meta-l.cdn.bubble.io/f1685632623945x484360545462020800/supabase-logo-icon.png"
   }
 ];
 
@@ -140,7 +128,7 @@ const HomepageContent = () => {
           <div className="tools-container">
             <h2 className="tools-title ">{t('tools-title')}</h2>
             <div className="tools-logos">
-              VS Code · Git/GitHub · Figma · Photoshop · Canva · Blender · Davinci Resolve · Ableton Live
+              Photoshop · Canva · Blender · Davinci Resolve · Ableton Live
             </div>
           </div>
         </div>

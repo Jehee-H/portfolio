@@ -1,0 +1,34 @@
+.bachelor-container {
+    min-height: calc(100vh - 83px - 90px);
+    width: 100%;
+    box-sizing: initial;
+    padding-top: 90px;
+    color: black;
+    /* background-color: rgb(8, 8, 8); */
+    background: white;
+    /* background: radial-gradient(circle, rgba(119, 124, 140, 1) 0%, rgba(8, 8, 8, 1) 100%); */
+}
+
+.bachelor-content{
+    padding: 0px 70px;
+}
+
+.bachelor-content h2 {
+    font-family: ClashDisplay;
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.bachelor-content p {
+    font-size: 2rem;
+}
+
+.bachelor-content a {
+    font-size: 2rem;
+    color: white;
+}
+
+.bachelor-links{
+    display: flex;
+    flex-direction: column;
+}
